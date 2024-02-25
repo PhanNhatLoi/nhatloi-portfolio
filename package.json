@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node ./scripts/next.js",
+    "start": "askndflsdf",
     "lint": "next lint"
   },
   "dependencies": {
