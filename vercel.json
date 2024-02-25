@@ -1,3 +1,4 @@
 {
-  "builds": [{ "src": "yarn start", "use": "@now/next" }]
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }],
+  "routes": [{ "src": "/(.*)", "dest": "yarn start" }]
 }
