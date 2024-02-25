@@ -5,23 +5,31 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node ./scripts/next.js",
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.1.0"
+    "@react-email/components": "0.0.12",
+    "@react-email/render": "^0.0.12",
+    "autoprefixer": "^10.4.17",
+    "dotenv": "^16.4.5",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.15",
+    "framer-motion": "^11.0.6",
+    "next": "13.4.15",
+    "postcss": "8.4.35",
+    "react": "18.2.0",
+    "react-animated-numbers": "^0.18.0",
+    "react-dom": "18.2.0",
+    "react-email": "1.10.0",
+    "react-type-animation": "^3.2.0",
+    "resend": "^1.0.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "@types/react-dom": "^18"
   }
 }
