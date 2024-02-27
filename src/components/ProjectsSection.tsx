@@ -94,6 +94,7 @@ const ProjectsSection = () => {
         {Object.keys(projectType).map((m) => {
           return (
             <ProjectTag
+              key={m}
               onClick={handleTagChange}
               name={m}
               isSelected={tag === m}

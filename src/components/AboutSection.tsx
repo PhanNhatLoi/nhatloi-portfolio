@@ -11,7 +11,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         {profileData.aboutMe.skills.map((m) => {
-          return <li>{m}</li>;
+          return <li key={m}>{m}</li>;
         })}
       </ul>
     ),
@@ -22,7 +22,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         {profileData.aboutMe.education.map((m) => {
-          return <li>{m}</li>;
+          return <li key={m}>{m}</li>;
         })}
       </ul>
     ),
@@ -33,7 +33,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         {profileData.aboutMe.certification.map((m) => {
-          return <li>{m}</li>;
+          return <li key={m}>{m}</li>;
         })}
       </ul>
     ),
