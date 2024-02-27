@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
+import profileData from "@/data/profileData";
 
 const AnimatedNumbers: any = dynamic(
   () => {
@@ -12,21 +13,17 @@ const AnimatedNumbers: any = dynamic(
 const achievementsList = [
   {
     metric: "Projects",
-    value: "100",
+    value: profileData.projects.length,
     postfix: "+",
   },
-  {
-    prefix: "~",
-    metric: "Users",
-    value: "100,000",
-  },
+
   {
     metric: "Awards",
-    value: "7",
+    value: profileData.aboutMe.awards,
   },
   {
     metric: "Years",
-    value: "5",
+    value: new Date(Date.now()).getFullYear() - profileData.aboutMe.startYear,
   },
 ];
 
@@ -41,10 +38,9 @@ const AchievementsSection = () => {
               className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
-                {achievement.prefix}
                 <AnimatedNumbers
                   includeComma
-                  animateToNumber={parseInt(achievement.value)}
+                  animateToNumber={achievement.value}
                   locale="vi-VN"
                   className="text-white text-4xl font-bold"
                   configs={(_: any, index: number) => {

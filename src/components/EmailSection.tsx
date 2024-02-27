@@ -4,9 +4,11 @@ import GithubIcon from "@/public/public/github-icon.svg";
 import LinkedinIcon from "@/public/public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import MUIButton from "./MUI/Button";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -15,28 +17,17 @@ const EmailSection = () => {
       subject: e.target.subject.value,
       message: e.target.message.value,
     };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
-
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
+    fetch("/api/test", {
       method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
-
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
-    }
+      body: JSON.stringify(data),
+    })
+      .then(async (res) => {})
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -70,7 +61,7 @@ const EmailSection = () => {
             Email sent successfully!
           </p>
         ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+          <form className="flex flex-col" onSubmit={(e) => handleSubmit}>
             <div className="mb-6">
               <label
                 htmlFor="email"
@@ -117,12 +108,10 @@ const EmailSection = () => {
                 placeholder="Let's talk about..."
               />
             </div>
-            <button
-              type="submit"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
-            >
-              Send Message
-            </button>
+
+            <MUIButton loading={loading} neonType={2} onClick={handleSubmit}>
+              Send
+            </MUIButton>
           </form>
         )}
       </div>

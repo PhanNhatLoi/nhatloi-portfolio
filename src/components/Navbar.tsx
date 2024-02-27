@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 // import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import Image from "next/image";
+import profileData from "@/data/profileData";
 
 const navLinks = [
   {
@@ -30,8 +32,31 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          LOGO
+          <div className="flex items-center justify-between">
+            <Image
+              style={{
+                borderRadius: "100%",
+                boxShadow: `
+                    0 0 5px #ff0000,
+                    0 0 10px #FF9933,
+                    0 0 20px #ff0000,
+                    0 0 40px #FF9933;
+              `,
+              }}
+              alt="logo"
+              src={"/logo_2.jpeg"}
+              width={50}
+              height={50}
+            />
+            <h1
+              style={{ fontSize: "20px", fontFamily: "sans-serif" }}
+              className="ml-5 neon-text"
+            >
+              {profileData.originalName}
+            </h1>
+          </div>
         </Link>
+
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button
