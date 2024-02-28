@@ -34,13 +34,23 @@ body {
 }
 
 .neon-text{
-  font-family: 'Megrim', cursive;
+  font-family: neon;
   text-shadow: 
         0 0 5px #ff0000,
         0 0 10px #FF9933,
         0 0 20px #ff0000,
         0 0 40px #FF9933,
         0 0 80px #FF9933;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.neon-box {
+  box-shadow: 
+  0 0 5px #ff0000,
+  0 0 10px #FF9933,
+  0 0 20px #ff0000,
+  0 0 40px #FF9933,
+  0 0 80px #FF9933;
 }
 
 /* loading */
