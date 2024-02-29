@@ -9,7 +9,7 @@ import MUIButton from "./MUI/Button";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
+    <section className="lg:py-16" id="about">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -30,7 +30,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+          <p className="text-[#ADB7BE] text-base text-justify sm:text-lg mb-6 lg:text-xl">
             {profileData.careerOrientation}
           </p>
           <div>
@@ -56,15 +56,14 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className=" w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-            <Image
-              src="/images/avatar.jpeg"
-              alt="hero image"
-              className="shadow-lg shadow-white rounded-sm bg-[#181818] "
-              width={400}
-              height={400}
-            />
-          </div>
+          <Image
+            src="/images/avatar.jpeg"
+            alt="hero image"
+            className="m-10 shadow-lg shadow-white rounded-sm bg-[#181818] "
+            width={250}
+            height={250}
+          />
+          {/* </div> */}
         </motion.div>
       </div>
     </section>

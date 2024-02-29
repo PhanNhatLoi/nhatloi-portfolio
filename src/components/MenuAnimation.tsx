@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { styled } from "@mui/material";
 import { Bars3Icon, PlusIcon } from "@heroicons/react/24/solid";
-import Link from "next/link";
+import { ItemMenuAminationType } from "@/app/page";
 
 const LiStyled = styled("div")(
   ({
@@ -18,15 +18,16 @@ const LiStyled = styled("div")(
     align-items: center;
     li {
         position: absolute;
-        left: 0;
+        right: 0;
         list-style: none;
         transform-origin: calc(${size} / 2);
         transition: 0.5s;
-        transition-delay: calc(0.1s * ${index});
-        transform: rotate(0) translateX(calc(${size} / 2 - 10px));
+        transition-delay: 0s;
     }
     .active {
+        right: calc(${size} / 2);
         transform: rotate(calc(360deg / ${total} * ${index}));
+        transition-delay: 0.5s;
     }
 
     li .link {
@@ -34,7 +35,7 @@ const LiStyled = styled("div")(
         display: flex;
         justify-content: center;
         align-items: center;
-        background: white;
+        background: #0bf4f3;
         padding: 10px;
         border-radius: 50%;
         transform: rotate(calc(360deg / -${total} * ${index}));
@@ -49,8 +50,15 @@ const MenuStyled = styled("div")(
         width: ${size};
         height:  ${size};
         display: flex;
-        justify-content: center;
+        justify-content: right;
         align-items: center;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+    }
+
+    .menu-toggle.active {
+        transition: 0.5s;
+        transform: translateX(-50%);
     }
 
     .toggle {
@@ -76,11 +84,7 @@ const MenuStyled = styled("div")(
 );
 
 type Props = {
-  menus: {
-    title: string;
-    icon: React.ReactNode;
-    href: string;
-  }[];
+  menus: ItemMenuAminationType[];
   size?: string | number;
 };
 const MenuAnimation = (props: Props) => {
@@ -108,16 +112,20 @@ const MenuAnimation = (props: Props) => {
           ) : (
             <Bars3Icon className="h-5 w-10 icon" />
           )}
-          {/* <PlusIcon className="h-5 w-10 icon" /> */}
         </div>
 
         {menus.map((m, i) => {
           return (
-            <LiStyled index={i} key={m.title} total={menus.length} size={size}>
+            <LiStyled index={i} key={i} total={menus.length} size={size}>
               <li className={`${isToggle ? "active" : ""}`}>
-                <Link className="link" href={m.href}>
+                <div
+                  className="link shadow-md shadow-black"
+                  onClick={() => {
+                    m.onClick && m.onClick();
+                  }}
+                >
                   {m.icon}
-                </Link>
+                </div>
               </li>
             </LiStyled>
           );
