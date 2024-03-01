@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { styled } from "@mui/material";
 import MenuNavbar from "./MenuNavbar";
 import { ItemMenuAminationType } from "@/app/page";
+import BottomNavbar from "./BottomNavbar";
 const SliderStyled = styled("div")(
   () => `
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: relative;
-
     #next , #prev {
         position: absolute;
         top: 40%;
@@ -110,7 +110,8 @@ const Slider = (props: Props) => {
       >
         {`>`}
       </button>
-      <MenuNavbar items={items} />
+      <BottomNavbar items={items} isSelected={itemSelect} />
+      <MenuNavbar items={items} isSelected={itemSelect} />
     </SliderStyled>
   );
 };

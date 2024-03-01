@@ -19,28 +19,34 @@ export type ItemMenuAminationType = {
   icon: React.ReactNode;
   content: React.ReactNode;
   onClick?: any;
+  title?: string;
 };
 const HomePage = () => {
   const items = [
     {
       icon: <HomeIcon className={`h-5 w-5`} />,
       content: <HeroSection />,
+      title: "Home",
     },
     {
       icon: <UserIcon className={`h-5 w-5`} />,
       content: <AboutSection />,
+      title: "About",
     },
     {
       icon: <ClockIcon className={`h-5 w-5`} />,
       content: <></>,
+      title: "Ex",
     },
     {
       icon: <CodeBracketIcon className={`h-5 w-5`} />,
       content: <ProjectsSection />,
+      title: "Project",
     },
     {
       icon: <ChatBubbleLeftIcon className={`h-5 w-5`} />,
       content: <EmailSection />,
+      title: "Contact",
     },
   ];
   return (

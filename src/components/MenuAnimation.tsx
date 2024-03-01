@@ -40,6 +40,9 @@ const LiStyled = styled("div")(
         border-radius: 50%;
         transform: rotate(calc(360deg / -${total} * ${index}));
     }
+    .selected {
+        background: red;
+    }
 `
 );
 
@@ -86,9 +89,10 @@ const MenuStyled = styled("div")(
 type Props = {
   menus: ItemMenuAminationType[];
   size?: string | number;
+  isSelected: number;
 };
 const MenuAnimation = (props: Props) => {
-  const { menus = [], size = "200px" } = props;
+  const { menus = [], size = "200px", isSelected } = props;
   const [isToggle, setIsToggle] = useState<boolean>(false);
   const [stateIcon, setStateIcon] = useState<boolean>(false);
 
@@ -114,12 +118,14 @@ const MenuAnimation = (props: Props) => {
           )}
         </div>
 
-        {menus.map((m, i) => {
+        {menus.map((m, i: number) => {
           return (
             <LiStyled index={i} key={i} total={menus.length} size={size}>
               <li className={`${isToggle ? "active" : ""}`}>
                 <div
-                  className="link shadow-md shadow-black"
+                  className={`link shadow-md shadow-black ${
+                    isSelected === i ? "selected" : ""
+                  }`}
                   onClick={() => {
                     m.onClick && m.onClick();
                   }}
