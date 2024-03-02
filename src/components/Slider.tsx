@@ -1,26 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "@mui/material";
-import MenuNavbar from "./MenuNavbar";
 import { ItemMenuAminationType } from "@/app/page";
 import BottomNavbar from "./BottomNavbar";
+import { useParams } from "next/navigation";
 const SliderStyled = styled("div")(
   () => `
     width: 100%;
-    height: 100%;
+    // height: 70%;
     overflow: hidden;
     position: relative;
     #next , #prev {
+        width: 50px;
+        box-shadow: 1px 1px 0px 0px black;
+        background: gray;
+        z-index: 9;
         position: absolute;
-        top: 40%;
+        top: 80%;
         color: white;
-        background: transparent;
-        border: none;
         font-size:xxx-large;
-        left: 50px;
+        right: 13%;
     }
     #next {
-        left: unset;
-        right: 50px;
+        top: 70%;
     }
     `
 );
@@ -75,9 +76,49 @@ type Props = {
 };
 const Slider = (props: Props) => {
   const [itemSelect, setItemSelect] = useState<number>(0);
+  const params = useParams();
+
+  useEffect(() => {
+    if (params.tag) {
+      switch (params.tag) {
+        case "overview":
+          setItemSelect(0);
+          break;
+        case "about":
+          setItemSelect(1);
+          break;
+        case "ex":
+          setItemSelect(2);
+          break;
+        case "projects":
+          setItemSelect(3);
+          break;
+        default:
+          break;
+      }
+    }
+  }, [params]);
   const { items } = props;
   return (
-    <SliderStyled>
+    <SliderStyled className="h-full sm:h-3/4">
+      <button
+        className="hidden sm:block"
+        id="prev"
+        onClick={() => {
+          itemSelect > 0 && setItemSelect(itemSelect - 1);
+        }}
+      >
+        {`<`}
+      </button>
+      <button
+        className="hidden sm:block"
+        id="next"
+        onClick={() => {
+          itemSelect < items.length - 1 && setItemSelect(itemSelect + 1);
+        }}
+      >
+        {`>`}
+      </button>
       {items.map((item: ItemMenuAminationType, index) => {
         item.onClick = () => setItemSelect(index);
         return (
@@ -88,30 +129,18 @@ const Slider = (props: Props) => {
               } ${index > itemSelect ? "right-item" : ""}
               p-10 bg-smoker-background m-auto shadow-black shadow-lg box-border rounded overflow-auto`}
             >
+              <div className=" absolute w-40 h-14 left-0 bg-amber-500 font-bold text-2xl text-black pl-5  flex items-center shadow-amber-500 shadow-md rounded-r-md">
+                {item.title}
+              </div>
               {item.content}
             </div>
           </ItemStyled>
         );
       })}
 
-      <button
-        id="prev"
-        onClick={() => {
-          itemSelect > 0 && setItemSelect(itemSelect - 1);
-        }}
-      >
-        {`<`}
-      </button>
-      <button
-        id="next"
-        onClick={() => {
-          itemSelect < items.length - 1 && setItemSelect(itemSelect + 1);
-        }}
-      >
-        {`>`}
-      </button>
+      {/* navbar using mobile divice */}
       <BottomNavbar items={items} isSelected={itemSelect} />
-      <MenuNavbar items={items} isSelected={itemSelect} />
+      {/*  */}
     </SliderStyled>
   );
 };

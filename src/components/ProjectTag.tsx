@@ -41,7 +41,7 @@ button span {
     display: block;
 }
 
-button span:nth-child(1) {
+button span:nth-of-type(1) {
     top: 0;
     left: 0;
     width: 100%;
@@ -61,7 +61,7 @@ button span:nth-child(1) {
     }
 }
 
-button span:nth-child(2) {
+button span:nth-of-type(2) {
     top: -100%;
     right: 0;
     width: 2px;
@@ -82,7 +82,7 @@ button span:nth-child(2) {
     }
 }
 
-button span:nth-child(3) {
+button span:nth-of-type(3) {
     bottom: 0;
     right: 0;
     width: 100%;
@@ -104,7 +104,7 @@ button span:nth-child(3) {
 }
 
 
-button span:nth-child(4) {
+button span:nth-of-type(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
@@ -141,10 +141,10 @@ const ProjectTag = ({
   return (
     <TagStyled color={color} onClick={() => onClick(name)}>
       <button className={`${isSelected ? "btn-selected" : ""}`}>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        {[1, 2, 3, 4].map((_, index) => {
+          return <span key={index}></span>;
+        })}
+
         {name}
       </button>
     </TagStyled>

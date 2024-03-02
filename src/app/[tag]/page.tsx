@@ -27,7 +27,7 @@ const HomePage = () => {
     {
       icon: <HomeIcon className={`h-5 w-5`} />,
       content: <HeroPage />,
-      title: "Home",
+      title: "Overview",
     },
     {
       icon: <UserIcon className={`h-5 w-5`} />,

@@ -88,13 +88,12 @@ const BottomNavbarStyled = styled("div")(
         left: 0;
         width: 70px;
         height: 70px;
-        background: red;
+        background: white;
         border-radius: 50%;
-        border: 6px solid transparent;
+        border: 4px solid black;
         transition: 0.5s;
     }
-
-    .navigation ul li:nth-child(${isSelected + 1}).active ~ .indicator {
+    .navigation ul li:nth-of-type(${isSelected + 1}).active ~ .indicator {
         transform: translateX(calc(100% * ${isSelected}));
     }
 `
