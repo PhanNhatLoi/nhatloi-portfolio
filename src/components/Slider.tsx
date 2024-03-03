@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { styled } from "@mui/material";
 import { ItemMenuAminationType } from "@/app/page";
 import BottomNavbar from "./BottomNavbar";
-import { useParams } from "next/navigation";
 const SliderStyled = styled("div")(
   () => `
     width: 100%;
@@ -73,39 +72,18 @@ const ItemStyled = styled("div")(
 
 type Props = {
   items: ItemMenuAminationType[];
+  currentTag: number;
+  setTag: React.Dispatch<React.SetStateAction<number>>;
 };
 const Slider = (props: Props) => {
-  const [itemSelect, setItemSelect] = useState<number>(0);
-  const params = useParams();
-
-  useEffect(() => {
-    if (params.tag) {
-      switch (params.tag) {
-        case "overview":
-          setItemSelect(0);
-          break;
-        case "about":
-          setItemSelect(1);
-          break;
-        case "ex":
-          setItemSelect(2);
-          break;
-        case "projects":
-          setItemSelect(3);
-          break;
-        default:
-          break;
-      }
-    }
-  }, [params]);
-  const { items } = props;
+  const { items, currentTag, setTag } = props;
   return (
     <SliderStyled className="h-full sm:h-3/4">
-      <button
+      {/* <button
         className="hidden sm:block"
         id="prev"
         onClick={() => {
-          itemSelect > 0 && setItemSelect(itemSelect - 1);
+          currentTag > 0 && setTag(currentTag - 1);
         }}
       >
         {`<`}
@@ -114,19 +92,18 @@ const Slider = (props: Props) => {
         className="hidden sm:block"
         id="next"
         onClick={() => {
-          itemSelect < items.length - 1 && setItemSelect(itemSelect + 1);
+          currentTag < items.length - 1 && setTag(currentTag + 1);
         }}
       >
         {`>`}
-      </button>
+      </button> */}
       {items.map((item: ItemMenuAminationType, index) => {
-        item.onClick = () => setItemSelect(index);
         return (
-          <ItemStyled key={index} index={Math.abs(itemSelect - index)}>
+          <ItemStyled key={index} index={Math.abs(currentTag - index)}>
             <div
-              className={`item ${index < itemSelect ? "left-item" : ""} ${
-                index === itemSelect ? "active" : ""
-              } ${index > itemSelect ? "right-item" : ""}
+              className={`item ${index < currentTag ? "left-item" : ""} ${
+                index === currentTag ? "active" : ""
+              } ${index > currentTag ? "right-item" : ""}
               p-10 bg-smoker-background m-auto shadow-black shadow-lg box-border rounded overflow-auto`}
             >
               <div className=" absolute w-40 h-14 left-0 bg-amber-500 font-bold text-2xl text-black pl-5  flex items-center shadow-amber-500 shadow-md rounded-r-md">
@@ -139,7 +116,7 @@ const Slider = (props: Props) => {
       })}
 
       {/* navbar using mobile divice */}
-      <BottomNavbar items={items} isSelected={itemSelect} />
+      <BottomNavbar items={items} isSelected={currentTag} />
       {/*  */}
     </SliderStyled>
   );

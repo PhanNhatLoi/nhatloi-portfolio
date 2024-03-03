@@ -118,7 +118,7 @@ const BottomNavbar = (props: Props) => {
                 <a
                   href="#"
                   onClick={() => {
-                    item.onClick && item.onClick();
+                    item.onClick && item.onClick(index);
                   }}
                 >
                   <span className="icon">{item.icon}</span>

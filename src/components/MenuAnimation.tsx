@@ -127,7 +127,7 @@ const MenuAnimation = (props: Props) => {
                     isSelected === i ? "selected" : ""
                   }`}
                   onClick={() => {
-                    m.onClick && m.onClick();
+                    m.onClick && m.onClick(i);
                   }}
                 >
                   {m.icon}

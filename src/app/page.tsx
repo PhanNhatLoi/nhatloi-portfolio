@@ -6,7 +6,7 @@ import EmailSection from "@/components/EmailSection";
 import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import Slider from "@/components/Slider";
-import React from "react";
+import React, { useState } from "react";
 import {
   ChatBubbleLeftIcon,
   ClockIcon,
@@ -15,45 +15,60 @@ import {
   UserIcon,
 } from "@heroicons/react/24/solid";
 import HeroPage from "@/components/HeroPage";
+import Navbar from "@/components/Navbar";
 
 export type ItemMenuAminationType = {
+  id: number;
   icon: React.ReactNode;
   content: React.ReactNode;
-  onClick?: any;
+  onClick: React.Dispatch<React.SetStateAction<number>>;
   title?: string;
 };
 const HomePage = () => {
-  const items = [
+  const [tag, setTag] = useState<number>(0);
+  const items: ItemMenuAminationType[] = [
     {
+      id: 0,
       icon: <HomeIcon className={`h-5 w-5`} />,
       content: <HeroPage />,
-      title: "Home",
+      title: "About me",
+      onClick: () => setTag(0),
     },
     {
+      id: 1,
       icon: <UserIcon className={`h-5 w-5`} />,
       content: <AboutSection />,
-      title: "About",
+      title: "Skills",
+      onClick: () => setTag(1),
     },
     {
+      id: 2,
       icon: <ClockIcon className={`h-5 w-5`} />,
       content: <></>,
       title: "Ex",
+      onClick: () => setTag(2),
     },
     {
+      id: 3,
       icon: <CodeBracketIcon className={`h-5 w-5`} />,
       content: <ProjectsSection />,
       title: "Project",
+      onClick: () => setTag(3),
     },
     {
+      id: 4,
       icon: <ChatBubbleLeftIcon className={`h-5 w-5`} />,
       content: <EmailSection />,
       title: "Contact",
+      onClick: () => setTag(4),
     },
   ];
+
   return (
     <BasicLayout>
+      <Navbar items={items} currentTag={tag} setTag={setTag} />
       <div className="w-full flex items-center">
-        <Slider items={items}></Slider>
+        <Slider items={items} currentTag={tag} setTag={setTag} />
       </div>
     </BasicLayout>
   );

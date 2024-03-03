@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const variants = {
-  default: { width: 0 },
-  active: { width: "calc(100% - 0.75rem)" },
+  default: { width: "3px", height: 0 },
+  active: { width: "3px", height: "100%" },
 };
 
 const TabButton = ({
@@ -18,15 +18,18 @@ const TabButton = ({
   const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
 
   return (
-    <button onClick={selectTab}>
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
-        {children}
-      </p>
+    <button onClick={selectTab} className="flex relative mb-5">
       <motion.div
         animate={active ? "active" : "default"}
         variants={variants}
-        className="h-1 bg-primary-500 mt-2 mr-3"
+        className="absolute bg-primary-500 w-5"
       ></motion.div>
+      <p
+        style={{ writingMode: "vertical-lr" }}
+        className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}
+      >
+        {children}
+      </p>
     </button>
   );
 };

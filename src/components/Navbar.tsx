@@ -1,37 +1,22 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import Image from "next/image";
 import profileData from "@/data/profileData";
+import { ItemMenuAminationType } from "@/app/page";
+import MUIButton from "./MUI/Button";
+import ButtonAnimated from "./MUI/Button2";
 
-const navLinks = [
-  {
-    title: "Overview",
-    path: "/overview",
-  },
-  {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Ex",
-    path: "/ex",
-  },
-  {
-    title: "Projects",
-    path: "/projects",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-];
-
-const Navbar = () => {
+type Props = {
+  items: ItemMenuAminationType[];
+  currentTag: number;
+  setTag: React.Dispatch<React.SetStateAction<number>>;
+};
+const Navbar = (props: Props) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const { items, currentTag, setTag } = props;
 
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100 hidden sm:block">
@@ -84,15 +69,24 @@ const Navbar = () => {
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            {navLinks.map((link, index) => (
+            {items.map((item, index) => (
               <li key={index} className="neon-text">
-                <NavLink href={link.path} title={link.title} />
+                <ButtonAnimated
+                  isSelected={index === currentTag}
+                  onClick={() => {
+                    setTag(index);
+                  }}
+                >
+                  {item.title}
+                </ButtonAnimated>
+                {/* <ProjectTag /> */}
+                {/* <NavLink href={link.path} title={link.title} /> */}
               </li>
             ))}
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {/* {navbarOpen ? <MenuOverlay links={navLinks} /> : null} */}
     </nav>
   );
 };
