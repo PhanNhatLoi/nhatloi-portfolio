@@ -11,7 +11,7 @@ const BottomNavbarStyled = styled("div")(
     @media(max-width: 600px) {
         display: block;
     }
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 999;
     bottom: 0;

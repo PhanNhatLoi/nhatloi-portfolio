@@ -28,7 +28,6 @@ const SliderStyled = styled("div")(
 const ItemStyled = styled("div")(
   ({ index }: { index: number }) => `
     .item {
-        // padding: 10px;
         position: absolute;
         height: 100%;
         text-align: justify;
@@ -79,24 +78,6 @@ const Slider = (props: Props) => {
   const { items, currentTag, setTag } = props;
   return (
     <SliderStyled className="h-full sm:h-3/4">
-      {/* <button
-        className="hidden sm:block"
-        id="prev"
-        onClick={() => {
-          currentTag > 0 && setTag(currentTag - 1);
-        }}
-      >
-        {`<`}
-      </button>
-      <button
-        className="hidden sm:block"
-        id="next"
-        onClick={() => {
-          currentTag < items.length - 1 && setTag(currentTag + 1);
-        }}
-      >
-        {`>`}
-      </button> */}
       {items.map((item: ItemMenuAminationType, index) => {
         return (
           <ItemStyled key={index} index={Math.abs(currentTag - index)}>
@@ -104,9 +85,9 @@ const Slider = (props: Props) => {
               className={`item ${index < currentTag ? "left-item" : ""} ${
                 index === currentTag ? "active" : ""
               } ${index > currentTag ? "right-item" : ""}
-              p-10 bg-smoker-background m-auto shadow-black shadow-lg box-border rounded overflow-auto`}
+              p-10 bg-smoker-background-mobile sm:bg-smoker-background m-auto shadow-black shadow-lg box-border rounded overflow-auto`}
             >
-              <div className=" absolute w-40 h-14 left-0 bg-amber-500 font-bold text-2xl text-black pl-5  flex items-center shadow-amber-500 shadow-md rounded-r-md">
+              <div className="absolute w-40 h-14 left-0 bg-amber-500 font-bold text-2xl text-black pl-5  flex items-center shadow-amber-500 shadow-md rounded-r-md">
                 {item.title}
               </div>
               {item.content}

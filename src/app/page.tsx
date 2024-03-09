@@ -45,7 +45,7 @@ const HomePage = () => {
       id: 2,
       icon: <ClockIcon className={`h-5 w-5`} />,
       content: <></>,
-      title: "Ex",
+      title: "Experience",
       onClick: () => setTag(2),
     },
     {

@@ -34,7 +34,7 @@ const HeroPage = () => {
           <ContactComponent />
         </div>
       </div>
-      <div className="w-full md:w-1/2 relative text-white p-0 pt-10 pb-10 pl-2 text-left">
+      <div className="w-full md:w-1/2 text-white pb-10 text-left">
         <div className="w-24 bg-yellow-500 h-1 mb-5"></div>
         <h1 className="text-3xl font-bold">{profileData.userOriginalName}</h1>
         <span className="text-lg text-amber-500 italic">

@@ -1,13 +1,13 @@
 "use client";
 import React, { useTransition, useState } from "react";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import TabButton from "./TabButton";
 import profileData from "@/data/profileData";
 
 const TAB_DATA = [
   {
     title: "Skills",
-    id: "skills",
+    id: 0,
     content: (
       <ul className="list-disc pl-2">
         {profileData.aboutMe.skills.map((m) => {
@@ -18,22 +18,38 @@ const TAB_DATA = [
   },
   {
     title: "Education",
-    id: "education",
+    id: 1,
     content: (
       <ul className="list-disc pl-2">
         {profileData.aboutMe.education.map((m) => {
-          return <li key={m}>{m}</li>;
+          return (
+            <li key={m}>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: m,
+                }}
+              />
+            </li>
+          );
         })}
       </ul>
     ),
   },
   {
     title: "Certifications",
-    id: "certifications",
+    id: 2,
     content: (
       <ul className="list-disc pl-2">
         {profileData.aboutMe.certification.map((m) => {
-          return <li key={m}>{m}</li>;
+          return (
+            <li key={m}>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: m,
+                }}
+              />
+            </li>
+          );
         })}
       </ul>
     ),
@@ -41,49 +57,76 @@ const TAB_DATA = [
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState(0);
   const [isPending, startTransition] = useTransition();
 
-  const handleTabChange = (id: string) => {
+  const handleTabChange = (id: number) => {
     startTransition(() => {
       setTab(id);
     });
   };
+  const items = [
+    {
+      id: 0,
+      content: (
+        <TabButton selectTab={() => handleTabChange(0)} active={tab === 0}>
+          {" "}
+          Skills{" "}
+        </TabButton>
+      ),
+      image: (
+        <img
+          style={{ width: "100%", maxWidth: "500px" }}
+          alt="skill"
+          src={"/images/skills.png"}
+        />
+      ),
+    },
+    {
+      id: 1,
+      content: (
+        <TabButton selectTab={() => handleTabChange(1)} active={tab === 1}>
+          {" "}
+          Education{" "}
+        </TabButton>
+      ),
+      image: (
+        <img
+          style={{ width: "100%", maxWidth: "400px" }}
+          alt="education"
+          src={"/images/COLLEGE_DEGREE.png"}
+        />
+      ),
+    },
+    {
+      id: 2,
+      content: (
+        <TabButton selectTab={() => handleTabChange(2)} active={tab === 2}>
+          {" "}
+          Certifications{" "}
+        </TabButton>
+      ),
+      image: (
+        <img
+          style={{ width: "100%", maxWidth: "200px" }}
+          alt="certifications"
+          src={"/images/IPTec.png"}
+        />
+      ),
+    },
+  ];
 
   return (
     <div className="flex text-white">
       <div className="mt-20 h-full w-1/5">
-        <div>
-          <TabButton
-            selectTab={() => handleTabChange("skills")}
-            active={tab === "skills"}
-          >
-            {" "}
-            Skills{" "}
-          </TabButton>
-        </div>
-        <div>
-          <TabButton
-            selectTab={() => handleTabChange("education")}
-            active={tab === "education"}
-          >
-            {" "}
-            Education{" "}
-          </TabButton>
-        </div>
-        <div>
-          <TabButton
-            selectTab={() => handleTabChange("certifications")}
-            active={tab === "certifications"}
-          >
-            {" "}
-            Certifications{" "}
-          </TabButton>
-        </div>
+        {items.map((item) => {
+          return <div key={item.id}>{item.content}</div>;
+        })}
       </div>
 
-      <div className="mt-20 w-1/2">
+      <div className="mt-20 w-full block sm:flex flex-wrap justify-between">
         {TAB_DATA.find((t) => t.id === tab)?.content}
+        {items.find((t) => t.id === tab)?.image}
       </div>
     </div>
   );
