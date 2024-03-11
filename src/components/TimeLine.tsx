@@ -28,9 +28,9 @@ const TimeLine = (props: Props) => {
       }}
       position="alternate"
     >
-      {data.map((item) => {
+      {data.map((item, index) => {
         return (
-          <TimelineItem className="w-full">
+          <TimelineItem key={index} className="w-full">
             <TimelineOppositeContent>
               <div className="font-bold">{item.position}</div>
               <div className="italic">{item.organization}</div>
