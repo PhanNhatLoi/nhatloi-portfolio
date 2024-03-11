@@ -41,6 +41,43 @@ export default {
     ],
     startYear: 2022,
     awards: 2,
+    experience: [
+      {
+        content: `
+        <ul>
+        <li>- Develop and deploy high-quality web and mobile applications, ensuring stability and good performance.</li>
+        <li>- Participate in the design and development of new features based on customer requirements and user feedback.</li>
+        <li>- Ensure source code always complies with company standards and development processes.</li>
+        <li>- Work effectively in a team environment, supporting and collaborating with other members to achieve project goals. Contribute ideas and solutions in optimizing development processes and improving performance.</li>
+        </ul>
+        `,
+        time: [new Date("09-01-2022"), new Date("01-01-2024")],
+        position: "Front-end Developer",
+        organization: "Ecaraid company",
+      },
+      {
+        content: `
+        <ul>
+        <li>- Learn more about ReactJs through the documents. Learn about the power, advantages and limitations of the library. Find and apply the best support frameworks.</li>
+        <li>- Complete a series of online courses across platforms to improve your programming skills, knowledge of new technologies, and efficient workflows in software development.</li>
+        <li>- Carry out small and medium-sized projects applying learned knowledge and find problems during the construction process and then find solutions.</li>
+        </ul>
+        `,
+        time: [new Date("12-01-2021"), new Date("08-01-2022")],
+        position: "Independent students",
+        organization: "(Not affiliated with any company)",
+      },
+      {
+        content: `<ul>
+        <li>- Participate in scientific research projects and algorithm olympiads at the university.</li>
+        <li>- Research and apply ReactJs to graduation project</li>
+        </ul>
+        `,
+        time: [new Date("06-01-2017"), new Date("12-01-2021")],
+        position: "College student",
+        organization: "Thu Dau Mot University",
+      },
+    ],
   },
   projects: [
     {
@@ -50,7 +87,7 @@ export default {
       image: "/images/projects/1.png",
       tag: ["All", "Web"],
       gitUrl: "/",
-      previewUrl: "https://consumer.ecaraid.com/",
+      previewUrl: "https://eca.ecaraid.com/",
     },
     {
       id: 2,
@@ -63,30 +100,21 @@ export default {
     },
     {
       id: 3,
-      title: "E-commerce Application",
+      title: "Sellpath web",
       description: "Project 3 description",
       image: "/images/projects/3.png",
       tag: ["All", "Web"],
       gitUrl: "/",
-      previewUrl: "/",
+      previewUrl: "http://stg.sellpath.ai:43000",
     },
     {
       id: 4,
-      title: "React Firebase Template",
+      title: "AUTO REPAIR SHOP MANAGERMENT-WEB",
       description: "Authentication and CRUD operations",
-      image: "/images/projects/5.png",
+      image: "/images/projects/4.png",
       tag: ["All", "Web"],
       gitUrl: "/",
-      previewUrl: "/",
-    },
-    {
-      id: 5,
-      title: "Full-stack Roadmap",
-      description: "Project 5 description",
-      image: "/images/projects/6.png",
-      tag: ["All", "Web"],
-      gitUrl: "/",
-      previewUrl: "/",
+      previewUrl: "https://portal.ecaraid.com/",
     },
   ],
 };

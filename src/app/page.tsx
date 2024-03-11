@@ -16,6 +16,7 @@ import {
 } from "@heroicons/react/24/solid";
 import HeroPage from "@/components/HeroPage";
 import Navbar from "@/components/Navbar";
+import Experience from "@/components/Experience";
 
 export type ItemMenuAminationType = {
   id: number;
@@ -44,7 +45,7 @@ const HomePage = () => {
     {
       id: 2,
       icon: <ClockIcon className={`h-5 w-5`} />,
-      content: <></>,
+      content: <Experience />,
       title: "Experience",
       onClick: () => setTag(2),
     },
