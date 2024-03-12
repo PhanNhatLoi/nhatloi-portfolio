@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nhat Loi Profilio",
+  title: "Nhat Loi Portfolio",
   description: "Front End Developer(ReactJs, NextJs, React Native)",
   keywords: [
     "ReactJs",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Nhatloi",
     "Phan Nhat Loi",
   ],
-  applicationName: "Profilio",
+  applicationName: "Portfolio",
   viewport: "width=device-width, initial-scale=1",
   // robots:'',
   icons: "/favicon.ico",

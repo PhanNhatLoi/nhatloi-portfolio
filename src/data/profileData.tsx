@@ -16,7 +16,7 @@ export const projectIcon = {
 };
 export default {
   originalEmail: "phanloi971@gmail.com",
-  originalName: "PROFILIO",
+  originalName: "PORTFOLIO",
   userOriginalName: "Phan Nhất Lợi",
   positionJob: ["Web Developer", "Mobile Dev"],
   careerOrientation:
