@@ -18,7 +18,7 @@ const HeroPage = () => {
         </Link>
         <Link
           target="_blank"
-          href="https://drive.google.com/file/d/16WxYTDlEQgtE2orUhRLUVw8vcRPWsyd6/view?usp=sharing"
+          href="https://drive.google.com/file/d/1hlHFnUYcDeo1tYN50bPPAn0J7b9Ps5sy/view?usp=sharing"
           className="pl-1 inline-block"
         >
           <MUIButton neonType={5}>Download CV</MUIButton>
