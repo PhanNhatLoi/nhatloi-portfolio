@@ -43,7 +43,7 @@ const HeroSection = () => {
 
             <Link
               target="_blank"
-              href="https://drive.google.com/file/d/16WxYTDlEQgtE2orUhRLUVw8vcRPWsyd6/view?usp=sharing"
+              href={profileData.originCVPath}
               className="px-1 inline-block py-1 w-full sm:w-fit mt-3"
             >
               <MUIButton neonType={4}>Download CV</MUIButton>

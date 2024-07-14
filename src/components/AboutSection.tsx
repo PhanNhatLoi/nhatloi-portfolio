@@ -1,6 +1,5 @@
 "use client";
 import React, { useTransition, useState } from "react";
-import { motion } from "framer-motion";
 import TabButton from "./TabButton";
 import profileData from "@/data/profileData";
 

@@ -16,11 +16,13 @@ export const projectIcon = {
 };
 export default {
   originalEmail: "phanloi971@gmail.com",
+  originCVPath:
+    "https://www.canva.com/design/DAF7Gfqgpb4/Yw6UI5unL0wQIZm7O3WHeA/edit?utm_content=DAF7Gfqgpb4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
   originalName: "PORTFOLIO",
   userOriginalName: "Phan Nhất Lợi",
   positionJob: ["Web Developer", "Mobile Dev"],
   careerOrientation:
-    "I am a Front-end developer with more than <strong>2 years</strong> of experience working with <strong>ReactJs</strong>. Able to fluently use <strong>Javascript</strong> and <strong>TypeScript</strong>. Knowledge of <strong>React native, NextJs and NodeJs</strong>.<p/>With the desire to find a <strong>Front-end</strong> position. In addition, I want to learn more about Back-end to become a fullstack developer<p/><i>#ReactJs, #NextJs, #Front-end, #React- native</i>",
+    "I am a Front-end developer with more than <strong>2 years</strong> of experience working with <strong>ReactJs</strong>. Able to fluently use <strong>Javascript</strong> and <strong>TypeScript</strong>. Knowledge of <strong>React native, NextJs and NodeJs, can work with Nosql (MongoDb) and MySql</strong>.<p/>With the desire to find a <strong>Front-end</strong> position. In addition, I want to learn more about Back-end to become a fullstack developer<p/><i>#ReactJs, #NextJs, #Front-end, #React-native, #NodeJs, #MongoDb, #MySql</i>",
   aboutMe: {
     skills: [
       "ReactJs",
@@ -42,6 +44,19 @@ export default {
     startYear: 2022,
     awards: 2,
     experience: [
+      {
+        content: `
+        <ul>
+        <li>- Perform analysis and build databases.</li>
+        <li>- Based on the analysis, build APIs to retrieve data and be responsible for connecting and adjusting to suit the front-end department.</li>
+        <li>- Work effectively in a team environment, supporting and collaborating with other members to achieve project goals. Contribute ideas and solutions in optimizing development processes and improving performance.</li>
+        <li>-Follow the scrum model of work progress management method, regularly update progress and report this process to the PM department. Make work optimization suggestions to superiors during the work process.</li>
+        </ul>
+        `,
+        time: [new Date("04-15-2024"), new Date()],
+        position: "Back-end Developer",
+        organization: "ZenS company",
+      },
       {
         content: `
         <ul>
