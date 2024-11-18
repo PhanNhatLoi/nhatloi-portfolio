@@ -22,10 +22,13 @@ export const metadata: Metadata = {
   ],
   applicationName: "Portfolio",
   viewport: "width=device-width, initial-scale=1",
-  // robots:'',
+  robots: "/robots.txt",
   icons: "/favicon.ico",
   alternates: {
     canonical: "/",
+  },
+  verification: {
+    google: "329PkCOAlB8JapopchbQVBteUsSWNRZv9L95pITSESI",
   },
 };
 
