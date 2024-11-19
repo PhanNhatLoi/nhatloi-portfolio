@@ -2,7 +2,8 @@ import { Resend } from "resend";
 import * as React from "react";
 import profileData from "@/data/profileData";
 
-const resend = new Resend("re_bDjC5jEk_PEVaXRp1mgExMwdTEc6RHxqi");
+const resend = new Resend("re_BWy1fzFY_9aHtbkQmeGWJ5VnwzopwDdv7");
+// const resend = new Resend("re_bDjC5jEk_PEVaXRp1mgExMwdTEc6RHxqi");
 
 export async function POST(req: Request) {
   const { email, subject, message } = await req.json();

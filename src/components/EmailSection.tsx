@@ -1,27 +1,29 @@
 "use client";
 import React, { useState } from "react";
-import GithubIcon from "@/public/public/github-icon.svg";
-import LinkedinIcon from "@/public/public/linkedin-icon.svg";
-import Link from "next/link";
-import Image from "next/image";
 import MUIButton from "./MUI/Button";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [loading, setLoading] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>("");
+  const [subject, setSubject] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
   const handleSubmit = async (e: any) => {
+    setLoading(true);
     e.preventDefault();
     const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
+      email: email,
+      subject: subject,
+      message: message,
     };
-    fetch("/api/test", {
+    fetch("/api/send-email", {
       method: "POST",
       body: JSON.stringify(data),
     })
-      .then(async (res) => {})
+      .then(() => {
+        setEmailSubmitted(true);
+      })
       .catch((err) => {
         console.log(err);
       })
@@ -48,7 +50,7 @@ const EmailSection = () => {
             Email sent successfully!
           </p>
         ) : (
-          <form className="flex flex-col" onSubmit={(e) => handleSubmit}>
+          <div className="flex flex-col">
             <div className="mb-6">
               <label
                 htmlFor="email"
@@ -57,6 +59,9 @@ const EmailSection = () => {
                 Your email
               </label>
               <input
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
                 name="email"
                 type="email"
                 id="email"
@@ -73,6 +78,9 @@ const EmailSection = () => {
                 Subject
               </label>
               <input
+                onChange={(e) => {
+                  setSubject(e.target.value);
+                }}
                 name="subject"
                 type="text"
                 id="subject"
@@ -89,6 +97,9 @@ const EmailSection = () => {
                 Message
               </label>
               <textarea
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
                 name="message"
                 id="message"
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
@@ -99,7 +110,7 @@ const EmailSection = () => {
             <MUIButton loading={loading} neonType={2} onClick={handleSubmit}>
               Send
             </MUIButton>
-          </form>
+          </div>
         )}
       </div>
     </div>
