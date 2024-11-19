@@ -107,7 +107,12 @@ const EmailSection = () => {
               />
             </div>
 
-            <MUIButton loading={loading} neonType={2} onClick={handleSubmit}>
+            <MUIButton
+              disabled={!email || !message}
+              loading={loading}
+              neonType={2}
+              onClick={handleSubmit}
+            >
               Send
             </MUIButton>
           </div>

@@ -162,6 +162,7 @@ type Props = {
   neonType?: 1 | 2 | 3 | 4 | 5;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   variant?: "text" | "outlined" | "contained";
+  disabled?: boolean;
 };
 const MUIButton = (props: Props) => {
   const {
@@ -169,10 +170,12 @@ const MUIButton = (props: Props) => {
     children = <></>,
     loading = false,
     variant = "outlined",
+    disabled = false,
   } = props;
   return (
     <ButtonStyled>
       <LoadingButton
+        disabled={disabled}
         variant={variant}
         onClick={onClick}
         fullWidth
