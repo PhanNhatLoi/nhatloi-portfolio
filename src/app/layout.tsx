@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "fullStack",
     "Nhatloi",
     "Phan Nhat Loi",
+    "Nhat Loi",
   ],
   applicationName: "Portfolio",
   viewport: "width=device-width, initial-scale=1",
