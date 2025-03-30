@@ -1,32 +1,45 @@
-/** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors");
-module.exports = {
+import type { Config } from "tailwindcss";
+const plugin = require("tailwindcss/plugin");
+
+const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "smoker-background": "url('/images/background_smoker.jpeg')",
-        "smoker-background-mobile":
-          "url('/images/background_smoker_mobile.jpeg')",
-      },
-      extend: {
-        fontFamily: {
-          neon: ["Neon", "sans-serif"],
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        primary: {
+          "100": "rgba(103, 58, 183, 0.7)",
+          "200": "#8B008B",
+          "300": "rgba(75, 0, 130, 1)",
+        },
+        text: {
+          "100": "rgb(77,77,77)",
         },
       },
     },
-    colors: {
-      ...colors,
-      primary: colors.red,
-      secondary: colors.orange,
+    screens: {
+      sm: "576px",
+      md: "768px",
+      lg: "992px",
+      xl: "1200px",
+      "2xl": "1536px",
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }: { addUtilities: any }) {
+      addUtilities({
+        ".clip-diagonal": {
+          clipPath: "polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)",
+        },
+      });
+    }),
+    require("tailwind-scrollbar-hide"),
+  ],
 };
+export default config;

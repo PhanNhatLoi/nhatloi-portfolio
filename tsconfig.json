@@ -12,23 +12,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@/public/*": ["./*"]
-    },
-    "forceConsistentCasingInFileNames": true
+      "@/*": ["./*"],
+      "@/pages/_components*": ["./pages/_components/*"]
+    }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/components/RipperEffect.js"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.mjs"],
   "exclude": ["node_modules"]
 }

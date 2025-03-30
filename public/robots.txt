@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://nhatloi-portfolio.vercel.app/
+Host: https://hs-globallogistic.com/
 
 # Sitemaps
-Sitemap: https://nhatloi-portfolio.vercel.app/sitemap.xml
+Sitemap: https://hs-globallogistic.com/sitemap.xml
