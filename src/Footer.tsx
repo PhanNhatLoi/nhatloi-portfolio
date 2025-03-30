@@ -28,21 +28,31 @@ export default function FooterCard() {
             href="https://www.linkedin.com/in/nhatloi/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline mt-6 mr-8 block w-full lg:w-auto lg:inline-block"
+            className="hover:underline mt-6 mr-8 flex flex-row items-center w-full lg:w-auto"
           >
+            <img
+              src="/images/linkedIn.svg"
+              alt="GitHub"
+              className="w-6 h-6 mr-2"
+            />
             LinkedIn
           </a>
           <a
             href="https://github.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline mt-6 mr-8 block w-full lg:w-auto lg:inline-block"
+            className="hover:underline mt-6 mr-8 flex flex-row items-center w-full lg:w-auto"
           >
+            <img
+              src="/images/github.svg"
+              alt="GitHub"
+              className="w-6 h-6 mr-2"
+            />
             GitHub
           </a>
           <a
             href="tel:+84367740971"
-            className="hover:underline mt-6 mr-8 block w-full lg:w-auto lg:inline-block"
+            className="hover:underline mt-6 mr-8 block w-full lg:w-auto"
           >
             Phone: +84 367740971
           </a>

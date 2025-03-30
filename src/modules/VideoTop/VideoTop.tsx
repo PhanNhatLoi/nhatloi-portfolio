@@ -3,12 +3,12 @@ import React from "react";
 
 const VideoTop = () => {
   return (
-    <div className="pb-[43%] w-screen relative">
+    <div className="pb-[55%] w-screen relative">
       {/* desktop UI */}
       <div className="absolute top-0 left-0 right-0 select-none">
         <video
           className="w-full h-full"
-          src="/videos/BS_USA_v1.mp4"
+          src="/videos/top-video_out.mp4"
           autoPlay
           loop
           muted

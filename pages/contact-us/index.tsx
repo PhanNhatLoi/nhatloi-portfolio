@@ -4,9 +4,11 @@ import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
+import MUIButton from "@/src/components/MUI/Button";
 
 const ContactUs = () => {
   const { t } = useTranslation();
+  const [loading, setLoading] = useState<boolean>(false);
   const [messageSuccess, setMessageSuccess] = useState<string>("");
   const router = useRouter();
   const { locale } = router;
@@ -34,21 +36,19 @@ const ContactUs = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
     try {
-      // const response = await fetch(
-      //   "https://hs-globallogistic.com/api/v1/admin/request-submit",
-      //   {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify(formData),
-      //   }
-      // );
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-      // if (!response.ok) {
-      //   throw new Error("Failed to submit form");
-      // }
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
       window.alert(messageSuccess);
       setFormData({
         email: "",
@@ -56,6 +56,8 @@ const ContactUs = () => {
       });
     } catch (error) {
       console.error("Error submitting form:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -76,16 +78,7 @@ const ContactUs = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="jacob@google.com"
-              className="w-full p-3 border border-gray-300 bg-gray-100 text-gray-500 rounded-md focus:outline-none"
-            />
-            <input
-              onChange={handleChange}
-              name="subject"
-              type="text"
-              id="subject"
-              required
-              placeholder="Just saying hi"
+              placeholder={t("your_email")}
               className="w-full p-3 border border-gray-300 bg-gray-100 text-gray-500 rounded-md focus:outline-none"
             />
 
@@ -93,25 +86,17 @@ const ContactUs = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder={t("specify_request")}
+              placeholder={t("message")}
               className="w-full p-3 border border-gray-300 bg-gray-100 text-gray-500 rounded-md focus:outline-none h-32"
             ></textarea>
-            <p className="text-gray-500">
-              {t("contact_form_4")}
-              <a href="#" className="text-blue-600 hover:underline ml-1">
-                {t("privacy_policy")}
-              </a>
-              .
-            </p>
-            <button
+            <MUIButton
               disabled={buttonDisabled}
-              type="submit"
-              className={`uppercase w-full ${
-                buttonDisabled ? "bg-[gray]" : "bg-yellow-500"
-              } text-white py-3 rounded-md font-semibold`}
+              loading={loading}
+              neonType={1}
+              onClick={handleSubmit}
             >
               {t("send")}
-            </button>
+            </MUIButton>
           </div>
         </div>
       </form>
