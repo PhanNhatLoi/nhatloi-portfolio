@@ -2,7 +2,6 @@ import { APP_NAME } from "@/src/configs/config";
 import { motion } from "framer-motion";
 import router from "next/router";
 import { useEffect, useState, useMemo } from "react";
-import styles from "./VideoTop.module.css";
 
 const VideoTop = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
