@@ -44,13 +44,13 @@
   "supply_chain_content":"Keeping up with the rapid development of technology, mobile application development is also an incredibly exciting field. I have chosen React Native as my mobile development language and have over 9 months of experience working with it.",
   "ware": "Web Developer",
   "ware_des":"ReactJs - NextJs",
-  "ware_content":"Web development, a field that has always competed with mobile development, has been evolving for a long time—even before mobile applications emerged and started competing with desktop applications. I use ReactJs and its framework, NextJs, and have over 2 years of experience in this role.",
+  "ware_content":"Web development, a field that has always competed with mobile development, has been evolving for a long time—even before mobile applications emerged and started competing with desktop applications. I use ReactJs and its framework, NextJs, and have over 3 years of experience in this role.",
   "trans":"Backend Developer",
   "trans_des":"NestJs",
   "trans_content":"To achieve dynamic data on web and mobile applications, data storage and processing before displaying it is crucial. The role I want to mention here is the Backend, which handles data queries from simple to complex, ensures data security for users, manages access permissions, and more. The technology I have chosen for this is NestJS, combined with NoSQL databases like MongoDB and MySQL.",
   "any_questions":"Any Questions",
   "we_here": "I am always available to take your questions.",
-  "contact_us":"Contact Me",
+  "contact_me":"Contact Me",
   "working_at":" Working at HS global logictics",
   "content_6_des":"As a globally operating logistics service provider, we can help you set a professional mark. We offer you opportunities to independently advance ideas and consistently develop your talents. You will be supported by fair superiors and 39,000 colleagues worldwide.",
   "apply_now":"Apply Now",
@@ -87,6 +87,6 @@
   "university_description":"- Participate in scientific research projects and algorithm olympiads at the university.<p/>- Research and apply ReactJs to graduation project",
   "independent_description":"- Learn more about ReactJs through the documents. Learn about the power, advantages and limitations of the library. Find and apply the best support frameworks.<p/>- Complete a series of online courses across platforms to improve your programming skills, knowledge of new technologies, and efficient workflows in software development.<p/>- Carry out small and medium-sized projects applying learned knowledge and find problems during the construction process and then find solutions.",
   "ecaraid_description":"- Develop and deploy high-quality web and mobile applications, ensuring stability and good performance.<p/>- Participate in the design and development of new features based on customer requirements and user feedback.<p/>- Ensure source code always complies with company standards and development processes.<p/>- Work effectively in a team environment, supporting and collaborating with other members to achieve project goals. Contribute ideas and solutions in optimizing development processes and improving performance.",
-  "zens_description":"- Perform analysis and build databases.<p/>- Based on the analysis, build APIs to retrieve data and be responsible for connecting and adjusting to suit the front-end department.<p/>- Work effectively in a team environment, supporting and collaborating with other members to achieve project goals. Contribute ideas and solutions in optimizing development processes and improving performance.<p/>- Follow the scrum model of work progress management method, regularly update progress and report this process to the PM department. Make work optimization suggestions to superiors during the work process."
-
+  "zens_description":"- Perform analysis and build databases.<p/>- Based on the analysis, build APIs to retrieve data and be responsible for connecting and adjusting to suit the front-end department.<p/>- Work effectively in a team environment, supporting and collaborating with other members to achieve project goals. Contribute ideas and solutions in optimizing development processes and improving performance.<p/>- Follow the scrum model of work progress management method, regularly update progress and report this process to the PM department. Make work optimization suggestions to superiors during the work process.",
+  "start_now":"Start now"
 }

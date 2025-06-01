@@ -85,17 +85,11 @@ export default function LanguagesSelection({
       </div>
       <StyledMenu
         id="demo-customized-menu"
-        MenuListProps={{
-          "aria-labelledby": "demo-customized-button",
-        }}
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
       >
-        <MenuItem
-          onClick={() => handleChangeLanguage(languageCode.vi)}
-          disableRipple
-        >
+        <MenuItem onClick={() => handleChangeLanguage(languageCode.vi)}>
           <span
             className={`${
               locale === languageCode.vi ? "text-primary-200 " : "text-black"
@@ -104,10 +98,7 @@ export default function LanguagesSelection({
             Tiếng Việt
           </span>
         </MenuItem>
-        <MenuItem
-          onClick={() => handleChangeLanguage(languageCode.en)}
-          disableRipple
-        >
+        <MenuItem onClick={() => handleChangeLanguage(languageCode.en)}>
           <span
             className={`${
               locale === languageCode.en ? "text-primary-200 " : "text-black"
