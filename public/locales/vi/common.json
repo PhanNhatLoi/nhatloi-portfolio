@@ -54,7 +54,7 @@
   
   "any_questions": "Bất kỳ câu hỏi nào?",
   "we_here": "Tôi luôn sẵn sàng nhận câu hỏi từ bạn.",
-  "contact_us": "Liên hệ ngay",
+  "contact_me": "Liên hệ ngay",
   
   "working_at": "Làm việc tại HS Global Logistics",
   "content_6_des": "Là một nhà cung cấp dịch vụ hậu cần hoạt động toàn cầu, chúng tôi giúp bạn xây dựng sự nghiệp chuyên nghiệp. Chúng tôi mang đến cho bạn cơ hội phát triển ý tưởng độc lập và nâng cao kỹ năng của mình. Bạn sẽ nhận được sự hỗ trợ từ các cấp quản lý công bằng và 39.000 đồng nghiệp trên toàn cầu.",
@@ -95,5 +95,7 @@
   "university_description":"- Tham gia các dự án nghiên cứu khoa học và kỳ thi Olympic thuật toán tại trường đại học.<p/>- Nghiên cứu và ứng dụng ReactJs vào đồ án tốt nghiệp",
   "independent_description":"- Tìm hiểu thêm về ReactJs thông qua các tài liệu. Tìm hiểu về sức mạnh, ưu điểm và hạn chế của thư viện. Tìm và áp dụng các khuôn khổ hỗ trợ tốt nhất.<p/>- Hoàn thành một loạt các khóa học trực tuyến trên nhiều nền tảng để cải thiện kỹ năng lập trình, kiến ​​thức về các công nghệ mới và quy trình làm việc hiệu quả trong phát triển phần mềm.<p/>- Thực hiện các dự án vừa và nhỏ áp dụng kiến ​​thức đã học và tìm ra vấn đề trong quá trình xây dựng, sau đó tìm ra giải pháp.",
   "ecaraid_description":"- Phát triển và triển khai các ứng dụng web và di động chất lượng cao, đảm bảo tính ổn định và hiệu suất tốt.<p/>- Tham gia thiết kế và phát triển các tính năng mới dựa trên yêu cầu của khách hàng và phản hồi của người dùng.<p/>- Đảm bảo mã nguồn luôn tuân thủ các tiêu chuẩn và quy trình phát triển của công ty.<p/>- Làm việc hiệu quả trong môi trường nhóm, hỗ trợ và cộng tác với các thành viên khác để đạt được mục tiêu của dự án. Đóng góp ý tưởng và giải pháp để tối ưu hóa quy trình phát triển và cải thiện hiệu suất.",
-  "zens_description":"- Thực hiện phân tích và xây dựng cơ sở dữ liệu.<p/>- Dựa trên phân tích, xây dựng API để truy xuất dữ liệu và chịu trách nhiệm kết nối và điều chỉnh cho phù hợp với bộ phận front-end.<p/>- Làm việc hiệu quả trong môi trường nhóm, hỗ trợ và cộng tác với các thành viên khác để đạt được mục tiêu của dự án. Đóng góp ý tưởng và giải pháp trong việc tối ưu hóa quy trình phát triển và cải thiện hiệu suất.<p/>- Thực hiện theo mô hình scrum về phương pháp quản lý tiến độ công việc, thường xuyên cập nhật tiến độ và báo cáo quy trình này cho bộ phận PM. Đưa ra các đề xuất tối ưu hóa công việc cho cấp trên trong quá trình làm việc."
+  "zens_description":"- Thực hiện phân tích và xây dựng cơ sở dữ liệu.<p/>- Dựa trên phân tích, xây dựng API để truy xuất dữ liệu và chịu trách nhiệm kết nối và điều chỉnh cho phù hợp với bộ phận front-end.<p/>- Làm việc hiệu quả trong môi trường nhóm, hỗ trợ và cộng tác với các thành viên khác để đạt được mục tiêu của dự án. Đóng góp ý tưởng và giải pháp trong việc tối ưu hóa quy trình phát triển và cải thiện hiệu suất.<p/>- Thực hiện theo mô hình scrum về phương pháp quản lý tiến độ công việc, thường xuyên cập nhật tiến độ và báo cáo quy trình này cho bộ phận PM. Đưa ra các đề xuất tối ưu hóa công việc cho cấp trên trong quá trình làm việc.",
+  "start_now":"Bắt đầu ngay"
+
 }

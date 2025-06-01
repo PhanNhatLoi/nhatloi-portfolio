@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import router from "next/router";
 import { useEffect, useState, useMemo } from "react";
 import styles from "./VideoTop.module.css";
+import { useTranslation } from "react-i18next";
 
 const VideoTop = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -229,7 +231,7 @@ const VideoTop = () => {
                 backdropFilter: "blur(4px)",
               }}
             >
-              <span className="relative z-5">Start now</span>
+              <span className="relative z-5">{t("start_now")}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[rgba(116,148,107,0.6)] to-[rgba(89,122,82,0.4)] opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
             </motion.button>
           </div>
