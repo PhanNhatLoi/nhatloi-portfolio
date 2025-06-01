@@ -1,8 +1,6 @@
 import FooterCard from "@/src/Footer";
 import HeaderSticky from "@/src/HeaderPage";
 import NextHeader from "@/src/NextHeader";
-import { GetServerSideProps } from "next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -26,11 +24,3 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale ?? "vi", ["common"])),
-    },
-  };
-};
