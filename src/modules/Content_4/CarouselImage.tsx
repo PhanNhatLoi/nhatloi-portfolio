@@ -97,13 +97,13 @@ export default function Carousel({
         <div className="my-10 gap-2 hidden md:flex">
           <button
             onClick={prevSlide}
-            className="bg-primary-300 flex justify-center items-center text-white p-3 hover:shadow-[0px_1px_15px_rgb(8,73,151)]"
+            className="bg-primary-300 flex justify-center items-center text-white p-3 "
           >
             <ArrowBackIosIcon />
           </button>
           <button
             onClick={nextSlide}
-            className="bg-primary-300 flex justify-center items-center text-white p-3 hover:shadow-[0px_1px_15px_rgb(8,73,151)]"
+            className="bg-primary-300 flex justify-center items-center text-white p-3"
           >
             <ArrowForwardIosIcon />
           </button>
@@ -126,7 +126,7 @@ export default function Carousel({
                 </span>
               </div>
 
-              <h3 className="text-lg uppercase text-[20px] md:text-[24px] hyphens-auto font-bold mt-1 line-clamp-3">
+              <h3 className="text-lg uppercase text-[20px] md:text-[24px] text-white hyphens-auto font-bold mt-1 line-clamp-3">
                 {t(item.title)}
               </h3>
               <p className="text-sm text-gray-500 mt-2 text-[1rem]">

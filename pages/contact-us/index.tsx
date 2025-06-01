@@ -68,7 +68,7 @@ const ContactUs = () => {
   return (
     <Layout>
       <form onSubmit={handleSubmit}>
-        <div className="max-w-lg mx-auto p-6 bg-white pt-[170px]">
+        <div className="max-w-lg mx-auto p-6 bg-background pt-[170px]">
           <div className=" mt-10">
             <p className="text-[#ADB7BE] mb-4 w-full">{t("contact_des")}</p>
           </div>
@@ -108,7 +108,7 @@ export default ContactUs;
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? "vi", ["common"])),
+      ...(await serverSideTranslations(locale ?? "en", ["common"])),
     },
   };
 };

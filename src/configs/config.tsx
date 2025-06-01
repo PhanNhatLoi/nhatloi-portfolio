@@ -33,8 +33,8 @@ export const menuList = {
   },
   menu_4: {
     id: 4,
-    label: "experience",
-    path: "/#experience",
+    label: "my_journey",
+    path: "/#my-journey",
     description: "experience_des",
   },
   // menu_5: {
@@ -55,6 +55,7 @@ export const menuListHeaderTop = [
     id: 2,
     label: "view_cv",
     path: "https://www.canva.com/design/DAGK5VUvelU/wi5J38FWnX0BG8q5fsvXfA/edit",
+    type: "_blank",
   },
   // {
   //   id: 3,

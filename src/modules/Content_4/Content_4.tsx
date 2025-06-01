@@ -74,8 +74,8 @@ export default function Content4() {
   const RenderItem = useCallback(() => {
     return (
       <div className="w-[50vw]">
-        <div className="relative w-full max-w-[200px] h-[2px] bg-[#cfcfd1]">
-          <div className="absolute top-[-30px] w-full flex justify-center">
+        <div className="relative w-full max-w-[200px] h-[2px] bg-white">
+          <div className="absolute top-[-30px] w-full flex justify-center text-white">
             <span>
               {currentIndex + 1} / {newsData.length}
             </span>
@@ -95,7 +95,7 @@ export default function Content4() {
     <div className="relative w-screen mb-10 flex flex-col items-center">
       <div className="container-ct w-full mb-14">
         <div className="mb-8 text-left w-full">
-          <h2 className="text-[20px] md:text-[32px] uppercase font-bold">
+          <h2 className="text-[20px] md:text-[32px] text-white uppercase font-bold">
             {t("projects")}
           </h2>
         </div>

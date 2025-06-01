@@ -59,7 +59,7 @@ export default function ExpandContent(props: Props) {
             {t("supply_chain_solutions")}
           </strong>
         </AccordionSummary>
-        <AccordionDetails className="text-white bg-[linear-gradient(rgba(103,58,183,0.8),rgba(75,0,130,0.8)),url('/images/Supply-Chain.jpg')] bg-center bg-cover">
+        <AccordionDetails className="text-white bg-[linear-gradient(rgba(76,136,88,0.9),rgba(52,93,60,0.9)),url('/images/Supply-Chain.jpg')] bg-center bg-cover">
           <h3 className="uppercase mb-4 font-bold text-[1.5rem] hyphens-auto">
             {t("supply_chain_des")}
           </h3>
@@ -103,7 +103,7 @@ export default function ExpandContent(props: Props) {
             {t("warehousing")}
           </strong>
         </AccordionSummary>
-        <AccordionDetails className="text-white bg-[linear-gradient(rgba(103,58,183,0.8),rgba(75,0,130,0.8)),url('/images/web-design.png')] bg-center bg-cover">
+        <AccordionDetails className="text-white bg-[linear-gradient(rgba(76,136,88,0.9),rgba(52,93,60,0.9)),url('/images/web-design.png')] bg-center bg-cover">
           <h3 className="uppercase mb-4 font-bold text-[1.5rem] hyphens-auto">
             {t("ware_des")}
           </h3>
@@ -147,7 +147,7 @@ export default function ExpandContent(props: Props) {
             {t("transport")}
           </strong>
         </AccordionSummary>
-        <AccordionDetails className="text-white bg-[linear-gradient(rgba(103,58,183,0.8),rgba(75,0,130,0.8)),url('/images/backend.png')] bg-center bg-cover">
+        <AccordionDetails className="text-white bg-[linear-gradient(rgba(76,136,88,0.9),rgba(52,93,60,0.9)),url('/images/backend.png')] bg-center bg-cover">
           <h3 className="uppercase mb-4 font-bold text-[1.5rem] hyphens-auto">
             {t("trans_des")}
           </h3>

@@ -19,7 +19,7 @@ const HeaderFixedMobile = () => {
   return (
     <header className="md:hidden block">
       <div className="md:hidden fixed z-50 top-0 right-0 left-0 h-[48px] bg-primary-100 flex justify-center">
-        <div className="z-50 h-full relative lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full px-[15px] py-auto flex items-center justify-between">
+        <div className="z-50 bg-primary-300 h-full relative lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full px-[15px] py-auto flex items-center justify-between">
           <div className="flex">
             {isMenuOpen ? (
               <div
@@ -40,7 +40,7 @@ const HeaderFixedMobile = () => {
             className={`absolute top-[-1px] right-[15px] h-full flex items-center`}
           >
             <a href="/" className="font-bold text-white text-xl">
-              PORTFOLIO
+              Nhat Loi
             </a>
           </div>
         </div>
@@ -64,6 +64,7 @@ const HeaderFixedMobile = () => {
                   >
                     <div
                       onClick={() => {
+                        setIsMenuOpen(false);
                         router.push(menu.path);
                       }}
                       className="lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-[30px] sm:px-0 w-full flex justify-between"
@@ -78,6 +79,7 @@ const HeaderFixedMobile = () => {
               {menuListHeaderTop.map((menu) => {
                 return (
                   <a
+                    target={menu.type === "_blank" ? "_blank" : "_self"}
                     key={menu.id}
                     href={menu.path}
                     className="hover:underline text-[#8B008B]"

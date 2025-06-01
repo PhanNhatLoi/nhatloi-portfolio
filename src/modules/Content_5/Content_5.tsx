@@ -1,57 +1,74 @@
 import { useTranslation } from "react-i18next";
+import { timelineData } from "../../data/timeline";
+import ImageSlider from "../../components/ImageSlider";
+import FadeInView from "../../components/animations/FadeInView";
+import SlideInView from "../../components/animations/SlideInView";
+import ScaleInView from "../../components/animations/ScaleInView";
+import { motion } from "framer-motion";
 
 export default function Content5() {
   const { t } = useTranslation();
   return (
-    <div className="w-screen h-full flex justify-center mb-[40px] md:mb-[80px]">
-      <div className="container-ct">
-        <div className="flex flex-col md:flex-row gap-5 md:gap-7">
-          <div className="cursor-pointer relative group w-full md:w-1/2 lg:w-[40%] h-72 lg:w-[40vw] overflow-hidden">
-            <img
-              src="/images/Wimmelbild.webp"
-              alt="About Us"
-              className="w-full h-full object-cover"
-            />
+    <div className="w-screen min-h-screen flex justify-center items-center py-20 overflow-x-hidden">
+      <div className="container-ct w-full">
+        <FadeInView>
+          <h2 className="text-4xl font-bold text-center mb-16 text-white">
+            {t("my_journey")}
+          </h2>
+        </FadeInView>
 
-            <div className="absolute inset-0 bg-black/30" />
-            <div className="absolute inset-0 bg-primary-100 opacity-0 group-hover:opacity-70 transition-opacity duration-500" />
+        <div className="relative">
+          {/* Timeline line with animation */}
+          <motion.div
+            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary-100"
+            initial={{ height: 0 }}
+            whileInView={{ height: "100%" }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          />
 
-            <div className="absolute inset-0 flex flex-col justify-end transition-all duration-300 group-hover:translate-y-0 translate-y-44">
-              <h2 className="text-[28px] md:text-[2.5rem] font-bold text-white px-6 pb-4 uppercase">
-                {t("about_us")}
-              </h2>
-              <div className="px-6 pb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <p className="mt-[10px] text-[16px] text-white">
-                  {t("about_us_des")}
-                </p>
-                <button className="mt-4 px-4 py-2 border border-white text-white uppercase font-bold">
-                  {t("read_more")}
-                </button>
-              </div>
+          {timelineData.map((item, index) => (
+            <div key={item.id} className="relative mb-20 last:mb-0 w-full">
+              <SlideInView
+                direction={index % 2 === 0 ? "right" : "left"}
+                delay={index * 0.2}
+              >
+                <div
+                  className={`flex items-center w-full ${
+                    index % 2 === 0
+                      ? "md:justify-start md:w-1/2 md:pr-8"
+                      : "md:justify-end md:w-1/2 md:ml-auto md:pl-8"
+                  }`}
+                >
+                  <div className="w-[calc(100%-2rem)] mx-4 md:w-[500px] md:mx-0 bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    {item.images.length > 0 && (
+                      <ImageSlider images={item.images} />
+                    )}
+                    <div className="p-6">
+                      <div className="flex justify-between items-center mb-2 gap-2 flex-wrap">
+                        <h3 className="text-2xl font-bold">{item.company}</h3>
+                        <span className="text-primary-100 font-semibold">
+                          {item.startDate} - {item.endDate}
+                        </span>
+                      </div>
+                      <div className="text-lg text-primary-100 mb-2">
+                        {item.role}
+                      </div>
+                      <p
+                        className="text-gray-600"
+                        dangerouslySetInnerHTML={{
+                          __html: t(item.description),
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </SlideInView>
+              <ScaleInView delay={index * 0.2 + 0.1}>
+                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary-100 rounded-full"></div>
+              </ScaleInView>
             </div>
-          </div>
-
-          <div className="cursor-pointer relative group w-full md:w-1/2 lg:w-[60%] h-72 overflow-hidden">
-            <img
-              src="/images/Port_Miami.webp"
-              alt="About Rhenus USA"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute inset-0 bg-black/30" />
-            <div className="absolute inset-0 bg-primary-100 opacity-0 group-hover:opacity-70 transition-opacity duration-500" />
-
-            <div className="absolute inset-0 flex flex-col justify-end transition-all duration-300 group-hover:translate-y-0 translate-y-16">
-              <h2 className="text-[28px] md:text-[2.5rem] font-bold text-white px-6 pb-4 uppercase">
-                {t("about_in")}
-              </h2>
-              <div className="px-6 pb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <button className="mt-4 px-4 py-2 border border-white text-white uppercase font-bold">
-                  {t("read_more")}
-                </button>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

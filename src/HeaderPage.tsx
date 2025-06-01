@@ -66,7 +66,12 @@ const HeaderSticky = () => {
             >
               {menuListHeaderTop.map((menu) => {
                 return (
-                  <a key={menu.id} href={menu.path} className="hover:underline">
+                  <a
+                    target={menu.type === "_blank" ? "_blank" : "_self"}
+                    key={menu.id}
+                    href={menu.path}
+                    className="hover:underline"
+                  >
                     {t(menu.label)}
                   </a>
                 );
@@ -78,7 +83,7 @@ const HeaderSticky = () => {
             className={`absolute top-[16px] right-[15px]`}
           >
             <Link href={"/"} className="font-bold text-white text-3xl">
-              PORTFOLIO
+              Nhat Loi
             </Link>
           </div>
           {/* Navbar */}

@@ -36,7 +36,7 @@
   "get_a_quote":"Get a Quote",
 
   "content_1_title":"Software Engineer",
-  "content_1_des":"I am currently a Fullstack developer with over <strong>2 years</strong> of hands-on experience working with Frontend <strong>ReactJs, NextJs and React Native</strong>. Proficient in <strong>Javascript</strong> and <strong>TypeScript</strong>; and Backend <strong>NestJS</strong>, with experience working with both <strong>NoSQL (MongoDB) and MySQL</strong>.<p/>I am looking for an opportunity to further develop my skills as a <strong>Fullstack developer</strong> and take on new challenges.<p/><i>#Fullstack, #ReactJs, #NextJs, #React-native, #NestJS, #MongoDb, #MySql</i>",
+  "content_1_des":"I am currently a Fullstack developer with over <strong>3 years</strong> of hands-on experience working with Frontend <strong>ReactJs, NextJs and React Native</strong>. Proficient in <strong>Javascript</strong> and <strong>TypeScript</strong>; and Backend <strong>NestJS</strong>, with experience working with both <strong>NoSQL (MongoDB) and MySQL</strong>.<p/>I am looking for an opportunity to further develop my skills as a <strong>Fullstack developer</strong> and take on new challenges.<p/><i>#Fullstack, #ReactJs, #NextJs, #React-native, #NestJS, #MongoDb, #MySql</i>",
   "content_2_title":"My Skills",
   "content_2_des":"I have explored three different fields and gained considerable experience as a Mobile Developer, Front-end Developer, and Back-end Developer.",  
   "supply_chain_solutions":"Mobile Developer",
@@ -78,10 +78,15 @@
   "projects":"Projects lasted",
   "project_in_progress":"Project in progress",
   "phone_to_me":"Phone to me",
-  "contact_des":" I&apos;m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!",
+  "contact_des":" I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
   "view_cv":"View CV",
   "skills":"Skills",
-  "experience":"experience",
-  "project":"project"
+  "experience":"Experience",
+  "my_journey":"My Journey",
+  "project":"project",
+  "university_description":"- Participate in scientific research projects and algorithm olympiads at the university.<p/>- Research and apply ReactJs to graduation project",
+  "independent_description":"- Learn more about ReactJs through the documents. Learn about the power, advantages and limitations of the library. Find and apply the best support frameworks.<p/>- Complete a series of online courses across platforms to improve your programming skills, knowledge of new technologies, and efficient workflows in software development.<p/>- Carry out small and medium-sized projects applying learned knowledge and find problems during the construction process and then find solutions.",
+  "ecaraid_description":"- Develop and deploy high-quality web and mobile applications, ensuring stability and good performance.<p/>- Participate in the design and development of new features based on customer requirements and user feedback.<p/>- Ensure source code always complies with company standards and development processes.<p/>- Work effectively in a team environment, supporting and collaborating with other members to achieve project goals. Contribute ideas and solutions in optimizing development processes and improving performance.",
+  "zens_description":"- Perform analysis and build databases.<p/>- Based on the analysis, build APIs to retrieve data and be responsible for connecting and adjusting to suit the front-end department.<p/>- Work effectively in a team environment, supporting and collaborating with other members to achieve project goals. Contribute ideas and solutions in optimizing development processes and improving performance.<p/>- Follow the scrum model of work progress management method, regularly update progress and report this process to the PM department. Make work optimization suggestions to superiors during the work process."
 
 }

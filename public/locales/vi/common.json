@@ -36,7 +36,7 @@
   "get_a_quote": "Nhận báo giá",
 
   "content_1_title": "Kỹ sư công nghệ",
-  "content_1_des": "Hiện tại tôi là một lập trình viên Fullstack đã trải qua hơn <strong>2 năm</strong> kinh nghiệm làm việc thực tế với Frontend <strong>ReactJs, NextJs và React Native</strong>. Thành thạo <strong>Javascript</strong> và <strong>TypeScript</strong>; và về Backend <strong>NestJS</strong>, có kinh nghiệm làm việc với cả <strong>NoSQL (MongoDB) và MySQL</strong>.<p/>Tôi đang tìm kiếm cơ hội để phát triển hơn nữa kỹ năng của mình với vai trò <strong>Fullstack developer</strong> và đón nhận những thử thách mới.<p/><i>#Fullstack, #ReactJs, #NextJs, #React-native, #NestJS, #MongoDb, #MySql</i>",
+  "content_1_des": "Hiện tại tôi là một lập trình viên Fullstack đã trải qua hơn <strong>3 năm</strong> kinh nghiệm làm việc thực tế với Frontend <strong>ReactJs, NextJs và React Native</strong>. Thành thạo <strong>Javascript</strong> và <strong>TypeScript</strong>; và về Backend <strong>NestJS</strong>, có kinh nghiệm làm việc với cả <strong>NoSQL (MongoDB) và MySQL</strong>.<p/>Tôi đang tìm kiếm cơ hội để phát triển hơn nữa kỹ năng của mình với vai trò <strong>Fullstack developer</strong> và đón nhận những thử thách mới.<p/><i>#Fullstack, #ReactJs, #NextJs, #React-native, #NestJS, #MongoDb, #MySql</i>",
   
   "content_2_title": "Kỹ năng lập trình",
   "content_2_des": "Tôi đã thử sức trong 3 lĩnh vực và có kinh nghiệm nhất định với Mobile developer, Front-end developer Back-end developer.",
@@ -47,7 +47,7 @@
   
   "ware": "Lập trình Web",
   "ware_des": "ReactJS - NextJs",
-  "ware_content": "Lập trình Web, lĩnh vực luôn cạnh tranh với lập trình di động, với sự phát triển lâu dài từ trước khi các ứng dụng di động xuất hiện và cạnh tranh với các ứng dụng desktop. Ngôn ngữ tôi sử dụng là ReactJs và một Framework phát triển từ ReactJs là NextJs với kinh nghiệm hơn 2 năm tại vị trí này",
+  "ware_content": "Lập trình Web, lĩnh vực luôn cạnh tranh với lập trình di động, với sự phát triển lâu dài từ trước khi các ứng dụng di động xuất hiện và cạnh tranh với các ứng dụng desktop. Ngôn ngữ tôi sử dụng là ReactJs và một Framework phát triển từ ReactJs là NextJs với kinh nghiệm hơn 3 năm tại vị trí này",
   "trans":"Lập trình Backend",
   "trans_des": "NestJs",
   "trans_content": "Để có được những dữ liệu động trên Web và Mobile app thì việc lưu trữ data, xử lý dữ liệu trước khi hiển thị ra cũng là một việc rất quan trọng. Vị trí tôi muốn nhắc đến ở đây là bộ phận Backend, người sẽ xử lý các truy vấn dữ liệu từ đơn giản đến phức tạp, tạo ra sự bảo mật dữ liệu cho người dùng, phân quyền truy cập dữ liệu,... Và ngôn ngữ tôi lựa chọn là Nestjs kết hợp với các nguồn cơ sở dữ liệu NoSQL (Mongodb) và MySql",
@@ -84,11 +84,16 @@
   "recent_news": "Tin tức mới nhất",
   "name":"Họ & tên",
   "projects":"Các dự án gần đây",
-  "Project in progress":"Dự án đang phát triển",
+  "project_in_progress":"Dự án đang phát triển",
   "phone_to_me":"Gọi cho tôi",
   "contact_des":"Tôi đang tìm kiếm những cơ hội mới, hộp thư của tôi luôn mở. Dù bạn có câu hỏi hay chỉ muốn chào một tiếng, tôi sẽ phản hồi bạn sớm nhất!",
   "view_cv":"Xem hồ sơ",
   "skills":"Kỹ năng",
   "experience":"Kinh nghiệm",
-  "project":"Dự án"
+  "my_journey":"Hành trình của tôi",
+  "project":"Dự án",
+  "university_description":"- Tham gia các dự án nghiên cứu khoa học và kỳ thi Olympic thuật toán tại trường đại học.<p/>- Nghiên cứu và ứng dụng ReactJs vào đồ án tốt nghiệp",
+  "independent_description":"- Tìm hiểu thêm về ReactJs thông qua các tài liệu. Tìm hiểu về sức mạnh, ưu điểm và hạn chế của thư viện. Tìm và áp dụng các khuôn khổ hỗ trợ tốt nhất.<p/>- Hoàn thành một loạt các khóa học trực tuyến trên nhiều nền tảng để cải thiện kỹ năng lập trình, kiến ​​thức về các công nghệ mới và quy trình làm việc hiệu quả trong phát triển phần mềm.<p/>- Thực hiện các dự án vừa và nhỏ áp dụng kiến ​​thức đã học và tìm ra vấn đề trong quá trình xây dựng, sau đó tìm ra giải pháp.",
+  "ecaraid_description":"- Phát triển và triển khai các ứng dụng web và di động chất lượng cao, đảm bảo tính ổn định và hiệu suất tốt.<p/>- Tham gia thiết kế và phát triển các tính năng mới dựa trên yêu cầu của khách hàng và phản hồi của người dùng.<p/>- Đảm bảo mã nguồn luôn tuân thủ các tiêu chuẩn và quy trình phát triển của công ty.<p/>- Làm việc hiệu quả trong môi trường nhóm, hỗ trợ và cộng tác với các thành viên khác để đạt được mục tiêu của dự án. Đóng góp ý tưởng và giải pháp để tối ưu hóa quy trình phát triển và cải thiện hiệu suất.",
+  "zens_description":"- Thực hiện phân tích và xây dựng cơ sở dữ liệu.<p/>- Dựa trên phân tích, xây dựng API để truy xuất dữ liệu và chịu trách nhiệm kết nối và điều chỉnh cho phù hợp với bộ phận front-end.<p/>- Làm việc hiệu quả trong môi trường nhóm, hỗ trợ và cộng tác với các thành viên khác để đạt được mục tiêu của dự án. Đóng góp ý tưởng và giải pháp trong việc tối ưu hóa quy trình phát triển và cải thiện hiệu suất.<p/>- Thực hiện theo mô hình scrum về phương pháp quản lý tiến độ công việc, thường xuyên cập nhật tiến độ và báo cáo quy trình này cho bộ phận PM. Đưa ra các đề xuất tối ưu hóa công việc cho cấp trên trong quá trình làm việc."
 }

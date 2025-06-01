@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   i18n: {
     locales: ["vi", "en"],
-    defaultLocale: "vi",
+    defaultLocale: "en",
     localeDetection: false,
   },
 };

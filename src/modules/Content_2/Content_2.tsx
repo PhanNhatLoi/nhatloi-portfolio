@@ -9,9 +9,9 @@ const Content2 = () => {
     <>
       <div className="container-ct flex justify-center text-text-100">
         <div className="md:min-h-[710px] relative hidden md:block text-left w-full flex flex-row mb-20">
-          <div className="w-full md:w-[40%] xl:w-[33%] h-[100px] xl:bg-white">
+          <div className="w-full md:w-[40%] xl:w-[33%] h-[100px] xl:bg-background">
             <div className="h-auto pr-0 md:pr-8 lg:pr-6 lg:h-[260px]">
-              <h2 className="font-bold uppercase hyphens-auto mb-6 mt-0 text-[28px] md:mb-[15px] md:text-[2rem] lg:mb-6 lg:text-[2.5rem]">
+              <h2 className="font-bold uppercase hyphens-auto mb-6 mt-0 text-[28px] md:mb-[15px] md:text-[2rem] lg:mb-6 lg:text-[2.5rem] text-text-100 bg-background">
                 {t("content_2_title")}
               </h2>
               <p className="mb-10 mt-0 text-base hyphens-auto font-normal md:mb-[64px] ">
@@ -55,7 +55,7 @@ const Content2 = () => {
               <div
                 className={`${
                   !itemActive || itemActive === 1 ? "block" : "hidden"
-                } color-white absolute w-auto right-0 lg:w-[500px] top-[200px] lg:top-[260px] left-[40%] xl:left-[33%] bottom-0 box-border text-white bg-gradient-to-br from-transparent via-[rgba(103,58,183,0.8)] to-[rgba(75,0,130,0.8)] p-10 clip-diagonal`}
+                } color-white absolute w-auto right-0 lg:w-[500px] top-[200px] lg:top-[260px] left-[40%] xl:left-[33%] bottom-0 box-border text-white bg-gradient-to-br from-transparent via-[rgba(116,148,107,0.85)] to-[rgba(66,92,61,0.9)] p-10 clip-diagonal`}
               >
                 <h3 className="uppercase mb-4 font-bold text-[1.5rem] hyphens-auto">
                   {t("supply_chain_des")}
@@ -109,7 +109,7 @@ const Content2 = () => {
               <div
                 className={`${
                   itemActive === 2 ? "block" : "hidden"
-                } color-white absolute w-auto right-0 lg:w-[500px] top-[200px] lg:top-[260px] left-[40%] xl:left-[33%] bottom-0 box-border text-white bg-gradient-to-br from-transparent via-[rgba(103,58,183,0.8)] to-[rgba(75,0,130,0.8)] p-10 clip-diagonal`}
+                } color-white absolute w-auto right-0 lg:w-[500px] top-[200px] lg:top-[260px] left-[40%] xl:left-[33%] bottom-0 box-border text-white bg-gradient-to-br from-transparent via-[rgba(116,148,107,0.85)] to-[rgba(66,92,61,0.9)] p-10 clip-diagonal`}
               >
                 <h3 className="uppercase mb-4 font-bold text-[1.5rem] hyphens-auto">
                   {t("ware_des")}
@@ -157,7 +157,7 @@ const Content2 = () => {
               <div
                 className={`${
                   itemActive === 3 ? "block" : "hidden"
-                } color-white absolute w-auto right-0 lg:w-[500px] top-[200px] lg:top-[260px] left-[40%] xl:left-[33%] bottom-0 box-border text-white bg-gradient-to-br from-transparent via-[rgba(103,58,183,0.8)] to-[rgba(75,0,130,0.8)] p-10 clip-diagonal`}
+                } color-white absolute w-auto right-0 lg:w-[500px] top-[200px] lg:top-[260px] left-[40%] xl:left-[33%] bottom-0 box-border text-white bg-gradient-to-br from-transparent via-[rgba(116,148,107,0.85)] to-[rgba(66,92,61,0.9)] p-10 clip-diagonal`}
               >
                 <h3 className="uppercase mb-4 font-bold text-[1.5rem] hyphens-auto">
                   {t("trans_des")}

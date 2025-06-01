@@ -32,6 +32,7 @@ export default function Home() {
       <Content3 />
       <div className="w-full pt-10  mb-10" id="project" />
       <Content4 />
+      <div className="w-full pt-10  mb-10" id="my-journey" />
       <Content5 />
       {/* <Content6 /> */}
     </Layout>
@@ -41,7 +42,7 @@ export default function Home() {
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? "vi", ["common"])),
+      ...(await serverSideTranslations(locale ?? "en", ["common"])),
     },
   };
 };

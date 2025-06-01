@@ -14,11 +14,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   if (!isClient) return null;
   return (
     <div
-      className={`items-center justify-items-center min-h-screen gap-16 font-[family-name:var(--font-geist-sans)]`}
+      className={`bg-background items-center justify-items-center min-h-screen gap-16 font-[family-name:var(--font-geist-sans)]`}
     >
       <NextHeader />
       <HeaderSticky />
-      <main className="min-h-screen min-w-screen flex flex-col items-center">
+      <main className="min-h-screen min-w-screen flex flex-col items-center bg-background">
         {children}
       </main>
 

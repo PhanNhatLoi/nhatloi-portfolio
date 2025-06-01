@@ -11,15 +11,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#1C1F1C", // Deep forest background
+        foreground: "#E5E7E3", // Warm light gray
         primary: {
-          "100": "rgba(103, 58, 183, 0.7)",
-          "200": "#8B008B",
-          "300": "rgba(75, 0, 130, 1)",
+          "100": "rgba(116, 148, 107, 0.85)", // Soft matcha
+          "200": "rgba(89, 122, 82, 0.9)", // Medium matcha
+          "300": "rgba(66, 92, 61, 1)", // Deep matcha
         },
         text: {
-          "100": "rgb(77,77,77)",
+          "100": "#F1F2EF", // Very light warm gray
+          "200": "#E5E7E3", // Light warm gray
+          "300": "#A3A69F", // Medium warm gray
+          "400": "#737873", // Dark warm gray
         },
       },
     },
