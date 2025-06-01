@@ -39,9 +39,9 @@ const HeaderFixedMobile = () => {
             onClick={goToHomePage}
             className={`absolute top-[-1px] right-[15px] h-full flex items-center`}
           >
-            <a href="/" className="font-bold text-white text-xl">
+            <div className="font-bold text-white text-xl cursor-pointer">
               Nhat Loi
-            </a>
+            </div>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ const HeaderFixedMobile = () => {
             <ul className="flex flex-col">
               {Object.values(menuList).map((menu) => {
                 return (
-                  <a
+                  <div
                     key={menu.id}
                     className="w-full block py-[15px] border-b-[2px] border-[#cce0ee] text-[#8B008B] flex justify-center"
                   >
@@ -71,7 +71,7 @@ const HeaderFixedMobile = () => {
                     >
                       <span>{t(menu.label).toUpperCase()}</span>
                     </div>
-                  </a>
+                  </div>
                 );
               })}
             </ul>

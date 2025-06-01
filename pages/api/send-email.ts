@@ -11,7 +11,7 @@ export default async function handler(
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
-  const { email, subject, message } = req.body;
+  const { email, message } = req.body;
 
   try {
     const data = await resend.emails.send({

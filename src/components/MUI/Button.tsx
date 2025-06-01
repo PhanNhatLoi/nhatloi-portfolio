@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "@mui/material";
 import { styled } from "@mui/material";
-import LoadingContent from "../Loading";
 const ButtonStyled = styled("div")(
   () => `
   cursor: pointer;

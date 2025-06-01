@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://hs-globallogistic.com/
+Host: http://localhost:6001/
 
 # Sitemaps
-Sitemap: https://hs-globallogistic.com/sitemap.xml
+Sitemap: http://localhost:6001/sitemap.xml
