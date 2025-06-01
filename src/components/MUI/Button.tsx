@@ -1,10 +1,10 @@
 import React from "react";
-import LoadingButton from "@mui/lab/LoadingButton";
+import { Button } from "@mui/material";
 import { styled } from "@mui/material";
-import LoadingContent from "../Loading";
 const ButtonStyled = styled("div")(
   () => `
- 
+  cursor: pointer;
+
   .custom-btn {
     color: #fff;
     padding: 10px 25px;
@@ -19,11 +19,11 @@ const ButtonStyled = styled("div")(
   /* 1 */
   .btn-1 {
     border: none;
-    background-color: #ff9aff;
-    box-shadow: 0 0 5px #ef97e8;
+    background-color:rgb(178, 91, 178);
+    box-shadow: 0 0 1px #ef97e8;
   }
   .btn-1:hover {
-     box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+     box-shadow: 0 0 10px #ef97e8, 0 0 10px #ef97e8, 0 0 10px #fff inset;
   }
   
   /* 2 */
@@ -174,17 +174,16 @@ const MUIButton = (props: Props) => {
   } = props;
   return (
     <ButtonStyled>
-      <LoadingButton
+      <Button
         disabled={disabled}
         variant={variant}
         onClick={onClick}
         fullWidth
         loading={loading}
-        loadingIndicator={<LoadingContent size={32} />}
         className={`${props.neonType && "custom-btn btn-" + props.neonType}`}
       >
         {children}
-      </LoadingButton>
+      </Button>
     </ButtonStyled>
   );
 };

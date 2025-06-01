@@ -63,7 +63,7 @@ type Props = {
 const LoadingContent = (props: Props) => {
   const { size = 100 } = props;
   return (
-    <LoadingStyled size={size}>
+    <LoadingStyled size={size} className="h-[100px] w-[100px]">
       <div className="loading">
         <div className="bars-common bar-one"></div>
         <div className="bars-common bar-two"></div>
