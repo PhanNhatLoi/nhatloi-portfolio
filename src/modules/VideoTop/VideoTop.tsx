@@ -2,6 +2,7 @@ import { APP_NAME } from "@/src/configs/config";
 import { motion } from "framer-motion";
 import router from "next/router";
 import { useEffect, useState, useMemo } from "react";
+import styles from "./VideoTop.module.css";
 
 const VideoTop = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -178,7 +179,7 @@ const VideoTop = () => {
               variants={titleVariants}
               initial="hidden"
               animate="visible"
-              className={`text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold mb-6 relative text-primary-100`}
+              className={`text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold mb-6 relative text-primary-100 ${styles.gradientTitle}`}
             >
               {APP_NAME}
             </motion.h1>
