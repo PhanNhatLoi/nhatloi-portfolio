@@ -132,7 +132,7 @@ const Content3 = () => {
           className="mt-6 border-2 border-white text-white px-6 py-2 uppercase font-bold hover:bg-white hover:text-[rgba(66,92,61,1)] transition cursor-pointer"
           style={{ transform: "translateZ(40px)" }}
         >
-          {t("contact_us")}!
+          {t("contact_me")}!
         </motion.div>
       </motion.div>
     </div>

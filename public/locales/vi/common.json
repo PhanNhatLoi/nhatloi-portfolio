@@ -53,7 +53,7 @@
   "trans_content": "Để có được những dữ liệu động trên Web và Mobile app thì việc lưu trữ data, xử lý dữ liệu trước khi hiển thị ra cũng là một việc rất quan trọng. Vị trí tôi muốn nhắc đến ở đây là bộ phận Backend, người sẽ xử lý các truy vấn dữ liệu từ đơn giản đến phức tạp, tạo ra sự bảo mật dữ liệu cho người dùng, phân quyền truy cập dữ liệu,... Và ngôn ngữ tôi lựa chọn là Nestjs kết hợp với các nguồn cơ sở dữ liệu NoSQL (Mongodb) và MySql",
   
   "any_questions": "Bất kỳ câu hỏi nào?",
-  "we_here": "Chúng tôi luôn sẵn sàng hỗ trợ bạn.",
+  "we_here": "Tôi luôn sẵn sàng nhận câu hỏi từ bạn.",
   "contact_us": "Liên hệ ngay",
   
   "working_at": "Làm việc tại HS Global Logistics",
@@ -86,7 +86,7 @@
   "projects":"Các dự án gần đây",
   "project_in_progress":"Dự án đang phát triển",
   "phone_to_me":"Gọi cho tôi",
-  "contact_des":"Tôi đang tìm kiếm những cơ hội mới, hộp thư của tôi luôn mở. Dù bạn có câu hỏi hay chỉ muốn chào một tiếng, tôi sẽ phản hồi bạn sớm nhất!",
+  "contact_des":"Tôi đang tìm kiếm những cơ hội mới, hộp thư của tôi luôn mở. Tôi sẽ phản hồi bạn sớm nhất!",
   "view_cv":"Xem hồ sơ",
   "skills":"Kỹ năng",
   "experience":"Kinh nghiệm",

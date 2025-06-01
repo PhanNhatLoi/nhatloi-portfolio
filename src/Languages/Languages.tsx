@@ -101,7 +101,7 @@ export default function LanguagesSelection({
               locale === languageCode.vi ? "text-primary-200 " : "text-black"
             }`}
           >
-            🇻🇳 Tiếng Việt
+            Tiếng Việt
           </span>
         </MenuItem>
         <MenuItem
@@ -113,7 +113,7 @@ export default function LanguagesSelection({
               locale === languageCode.en ? "text-primary-200 " : "text-black"
             }`}
           >
-            🇬🇧 English
+            English
           </span>
         </MenuItem>
       </StyledMenu>

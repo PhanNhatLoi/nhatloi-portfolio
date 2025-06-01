@@ -22,60 +22,6 @@ const Content2 = () => {
             <div className="hidden md:block">
               <figure
                 className={`${
-                  !itemActive || itemActive === 1 ? "block" : "hidden"
-                } absolute top-0 right-0 bottom-0 w-[60%] xl:w-[67%] h-[710px] overflow-hidden`}
-              >
-                <div className="inset-0 absolute hidden xl:block">
-                  <img
-                    className="w-full h-full"
-                    src="/images/Supply-Chain.png"
-                  />
-                </div>
-                <div className="inset-0 absolute block xl:hidden">
-                  <img
-                    className="w-full h-full"
-                    src="/images/Supply-Chain_2.png"
-                  />
-                </div>
-              </figure>
-              <div
-                onClick={() => {
-                  setItemActive(1);
-                }}
-                className={`${
-                  !itemActive || itemActive === 1
-                    ? "bg-primary-300 text-white"
-                    : "text-primary-300"
-                } py-0 px-[14px] lg:px-[16px] h-14 flex flex-wrap items-center`}
-              >
-                <strong className="font-bold pt-[18px] px-0 pb-5 text-base">
-                  {t("supply_chain_solutions")}
-                </strong>
-              </div>
-              <div
-                className={`${
-                  !itemActive || itemActive === 1 ? "block" : "hidden"
-                } color-white absolute w-auto right-0 lg:w-[500px] top-[200px] lg:top-[260px] left-[40%] xl:left-[33%] bottom-0 box-border text-white bg-gradient-to-br from-transparent via-[rgba(116,148,107,0.85)] to-[rgba(66,92,61,0.9)] p-10 clip-diagonal`}
-              >
-                <h3 className="uppercase mb-4 font-bold text-[1.5rem] hyphens-auto">
-                  {t("supply_chain_des")}
-                </h3>
-                <p className="text-base hyphens-auto font-normal">
-                  {t("supply_chain_content")}
-                </p>
-
-                <a
-                  href="https://reactnative.dev/"
-                  target="_blank"
-                  className="absolute mt-4 text-white border-[2px] border-white uppercase font-bold py-[13px] px-[40px] flex min-h-[48px] bottom-10 left-10"
-                >
-                  {t("learn_more")}
-                </a>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <figure
-                className={`${
                   itemActive === 2 ? "block" : "hidden"
                 } absolute top-0 right-0 bottom-0 w-[60%] xl:w-[67%] h-[710px] overflow-hidden`}
               >
@@ -109,7 +55,7 @@ const Content2 = () => {
               <div
                 className={`${
                   itemActive === 2 ? "block" : "hidden"
-                } color-white absolute w-auto right-0 lg:w-[500px] top-[200px] lg:top-[260px] left-[40%] xl:left-[33%] bottom-0 box-border text-white bg-gradient-to-br from-transparent via-[rgba(116,148,107,0.85)] to-[rgba(66,92,61,0.9)] p-10 clip-diagonal`}
+                } color-white absolute w-auto right-0 lg:w-[500px] top-[200px] lg:top-[260px] left-[40%] xl:left-[33%] bottom-0 box-border text-white bg-gradient-to-br from-[rgba(66,92,61,1)] via-[rgba(116,148,107,0.85)]  to-[rgba(116,148,107,0.7)] p-10 clip-diagonal`}
               >
                 <h3 className="uppercase mb-4 font-bold text-[1.5rem] hyphens-auto">
                   {t("ware_des")}
@@ -127,6 +73,61 @@ const Content2 = () => {
                 </a>
               </div>
             </div>
+            <div className="hidden md:block">
+              <figure
+                className={`${
+                  !itemActive || itemActive === 1 ? "block" : "hidden"
+                } absolute top-0 right-0 bottom-0 w-[60%] xl:w-[67%] h-[710px] overflow-hidden`}
+              >
+                <div className="inset-0 absolute hidden xl:block">
+                  <img
+                    className="w-full h-full"
+                    src="/images/Supply-Chain.png"
+                  />
+                </div>
+                <div className="inset-0 absolute block xl:hidden">
+                  <img
+                    className="w-full h-full"
+                    src="/images/Supply-Chain_2.png"
+                  />
+                </div>
+              </figure>
+              <div
+                onClick={() => {
+                  setItemActive(1);
+                }}
+                className={`${
+                  !itemActive || itemActive === 1
+                    ? "bg-primary-300 text-white"
+                    : "text-primary-300"
+                } py-0 px-[14px] lg:px-[16px] h-14 flex flex-wrap items-center`}
+              >
+                <strong className="font-bold pt-[18px] px-0 pb-5 text-base">
+                  {t("supply_chain_solutions")}
+                </strong>
+              </div>
+              <div
+                className={`${
+                  !itemActive || itemActive === 1 ? "block" : "hidden"
+                } color-white absolute w-auto right-0 lg:w-[500px] top-[200px] lg:top-[260px] left-[40%] xl:left-[33%] bottom-0 box-border text-white bg-gradient-to-br from-[rgba(66,92,61,1)] via-[rgba(116,148,107,0.85)]  to-[rgba(116,148,107,0.7)] p-10 clip-diagonal`}
+              >
+                <h3 className="uppercase mb-4 font-bold text-[1.5rem] hyphens-auto">
+                  {t("supply_chain_des")}
+                </h3>
+                <p className="text-base hyphens-auto font-normal">
+                  {t("supply_chain_content")}
+                </p>
+
+                <a
+                  href="https://reactnative.dev/"
+                  target="_blank"
+                  className="absolute mt-4 text-white border-[2px] border-white uppercase font-bold py-[13px] px-[40px] flex min-h-[48px] bottom-10 left-10"
+                >
+                  {t("learn_more")}
+                </a>
+              </div>
+            </div>
+
             <div className="hidden md:block">
               <figure
                 className={`${
@@ -157,7 +158,7 @@ const Content2 = () => {
               <div
                 className={`${
                   itemActive === 3 ? "block" : "hidden"
-                } color-white absolute w-auto right-0 lg:w-[500px] top-[200px] lg:top-[260px] left-[40%] xl:left-[33%] bottom-0 box-border text-white bg-gradient-to-br from-transparent via-[rgba(116,148,107,0.85)] to-[rgba(66,92,61,0.9)] p-10 clip-diagonal`}
+                } color-white absolute w-auto right-0 lg:w-[500px] top-[200px] lg:top-[260px] left-[40%] xl:left-[33%] bottom-0 box-border text-white bg-gradient-to-br from-[rgba(66,92,61,1)] via-[rgba(116,148,107,0.85)]  to-[rgba(116,148,107,0.7)] p-10 clip-diagonal`}
               >
                 <h3 className="uppercase mb-4 font-bold text-[1.5rem] hyphens-auto">
                   {t("trans_des")}
