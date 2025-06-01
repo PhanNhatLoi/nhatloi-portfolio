@@ -179,7 +179,7 @@ const VideoTop = () => {
               variants={titleVariants}
               initial="hidden"
               animate="visible"
-              className={`text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold mb-6 relative ${styles.gradientTitle}`}
+              className={`text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold mb-6 relative text-primary-100`}
             >
               {APP_NAME}
             </motion.h1>
