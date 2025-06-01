@@ -1,7 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Layout from "@/pages/_layout";
-import { GetServerSideProps } from "next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 import MUIButton from "@/src/components/MUI/Button";
@@ -105,10 +103,3 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale ?? "en", ["common"])),
-    },
-  };
-};

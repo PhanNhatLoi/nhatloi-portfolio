@@ -1,5 +1,3 @@
-import { GetServerSideProps } from "next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import VideoTop from "@/src/modules/VideoTop/VideoTop";
 import Content1 from "@/src/modules/Content_1/Content_1";
 import Content2 from "@/src/modules/Content_2/Content_2";
@@ -38,11 +36,3 @@ export default function Home() {
     </Layout>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale ?? "en", ["common"])),
-    },
-  };
-};
