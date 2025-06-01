@@ -2,6 +2,7 @@ import { APP_NAME } from "@/src/configs/config";
 import { motion } from "framer-motion";
 import router from "next/router";
 import { useEffect, useState, useMemo } from "react";
+import styles from "./VideoTop.module.css";
 
 const VideoTop = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -178,25 +179,7 @@ const VideoTop = () => {
               variants={titleVariants}
               initial="hidden"
               animate="visible"
-              className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold mb-6 relative"
-              style={{
-                transform: "translateZ(50px) rotateX(10deg)",
-                background: `linear-gradient(
-                  300deg,
-                  rgba(116,148,107,1) 0%,
-                  #85A17D 25%,
-                  #B4C6A6 50%,
-                  #85A17D 75%,
-                  rgba(66,92,61,1) 100%
-                )`,
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                color: "transparent",
-                backgroundSize: "200% auto",
-                animation: "gradient 4s linear infinite",
-                WebkitTextStroke: "1px rgba(255,255,255,0.1)",
-                filter: "drop-shadow(0 20px 30px rgba(66,92,61,0.5))",
-              }}
+              className={`text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold mb-6 relative text-primary-100 ${styles.gradientTitle}`}
             >
               {APP_NAME}
             </motion.h1>

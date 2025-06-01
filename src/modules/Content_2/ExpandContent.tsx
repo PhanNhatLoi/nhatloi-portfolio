@@ -33,6 +33,51 @@ export default function ExpandContent(props: Props) {
   return (
     <div className="block md:hidden">
       <Accordion
+        expanded={itemActive === 2}
+        onChange={() => handleSelectItem(2)}
+      >
+        <AccordionSummary
+          className={`${
+            itemActive === 2
+              ? "!bg-primary-200 !text-white"
+              : "!bg-white !text-primary-200"
+          }`}
+          expandIcon={
+            <ExpandMoreIcon
+              className={`${
+                itemActive === 1 ? "text-white" : "text-primary-200"
+              }`}
+              sx={{
+                fontSize: "32px",
+              }}
+            />
+          }
+          aria-controls="panel1d-content"
+          id="panel1d-header"
+        >
+          <strong className="font-bold pt-[18px] px-0 pb-5 text-base">
+            {t("ware")}
+          </strong>
+        </AccordionSummary>
+        <AccordionDetails className="text-white bg-[linear-gradient(rgba(76,136,88,0.9),rgba(52,93,60,0.9)),url('/images/web-design.png')] bg-center bg-cover">
+          <h3 className="uppercase mb-4 font-bold text-[1.5rem] hyphens-auto">
+            {t("ware_des")}
+          </h3>
+          <p className="text-base hyphens-auto font-normal">
+            {t("ware_content")}
+          </p>
+          <div className="flex pb-8">
+            <a
+              href="https://react.dev/"
+              target="_blank"
+              className="mt-4 text-white border-[2px] border-white uppercase font-bold py-[13px] px-[40px] flex min-h-[48px]"
+            >
+              {t("learn_more")}
+            </a>
+          </div>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
         expanded={itemActive === 1}
         onChange={() => handleSelectItem(1)}
       >
@@ -68,51 +113,8 @@ export default function ExpandContent(props: Props) {
           </p>
           <div className="flex pb-8">
             <a
-              href="#"
-              className="mt-4 text-white border-[2px] border-white uppercase font-bold py-[13px] px-[40px] flex min-h-[48px]"
-            >
-              {t("learn_more")}
-            </a>
-          </div>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={itemActive === 2}
-        onChange={() => handleSelectItem(2)}
-      >
-        <AccordionSummary
-          className={`${
-            itemActive === 2
-              ? "!bg-primary-200 !text-white"
-              : "!bg-white !text-primary-200"
-          }`}
-          expandIcon={
-            <ExpandMoreIcon
-              className={`${
-                itemActive === 1 ? "text-white" : "text-primary-200"
-              }`}
-              sx={{
-                fontSize: "32px",
-              }}
-            />
-          }
-          aria-controls="panel1d-content"
-          id="panel1d-header"
-        >
-          <strong className="font-bold pt-[18px] px-0 pb-5 text-base">
-            {t("warehousing")}
-          </strong>
-        </AccordionSummary>
-        <AccordionDetails className="text-white bg-[linear-gradient(rgba(76,136,88,0.9),rgba(52,93,60,0.9)),url('/images/web-design.png')] bg-center bg-cover">
-          <h3 className="uppercase mb-4 font-bold text-[1.5rem] hyphens-auto">
-            {t("ware_des")}
-          </h3>
-          <p className="text-base hyphens-auto font-normal">
-            {t("trans_content")}
-          </p>
-          <div className="flex pb-8">
-            <a
-              href="#"
+              href="https://reactnative.dev/"
+              target="_blank"
               className="mt-4 text-white border-[2px] border-white uppercase font-bold py-[13px] px-[40px] flex min-h-[48px]"
             >
               {t("learn_more")}
@@ -144,7 +146,7 @@ export default function ExpandContent(props: Props) {
           id="panel1d-header"
         >
           <strong className="font-bold pt-[18px] px-0 pb-5 text-base">
-            {t("transport")}
+            {t("trans")}
           </strong>
         </AccordionSummary>
         <AccordionDetails className="text-white bg-[linear-gradient(rgba(76,136,88,0.9),rgba(52,93,60,0.9)),url('/images/backend.png')] bg-center bg-cover">
@@ -156,7 +158,8 @@ export default function ExpandContent(props: Props) {
           </p>
           <div className="flex pb-8">
             <a
-              href="#"
+              href="https://nestjs.com/"
+              target="_blank"
               className="mt-4 text-white border-[2px] border-white uppercase font-bold py-[13px] px-[40px] flex min-h-[48px]"
             >
               {t("learn_more")}

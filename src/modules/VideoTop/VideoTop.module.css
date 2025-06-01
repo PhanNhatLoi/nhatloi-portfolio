@@ -1,0 +1,30 @@
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradientTitle {
+  transform: translateZ(50px) rotateX(10deg);
+  background: linear-gradient(
+    300deg,
+    rgba(116,148,107,1) 0%,
+    #85A17D 25%,
+    #B4C6A6 50%,
+    #85A17D 75%,
+    rgba(66,92,61,1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: gradient 4s linear infinite;
+  -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+  filter: drop-shadow(0 20px 30px rgba(66,92,61,0.5));
+} 
