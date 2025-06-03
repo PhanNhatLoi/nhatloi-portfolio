@@ -1,12 +1,7 @@
-import { useRouter } from "next/router";
 import React, { useState, useEffect, useMemo } from "react";
-import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
-const Content3 = () => {
-  const { t } = useTranslation();
-  const router = useRouter();
-  const { locale } = router;
+const ShapeCard = ({ children }: { children: React.ReactNode }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -55,14 +50,8 @@ const Content3 = () => {
     []
   );
 
-  const goToPage = (path: string) => {
-    const currentLocale = locale === "vi" ? "" : `/${locale}`;
-    router.push(`${currentLocale}${path}`);
-  };
-
   return (
-    <div className="relative w-full flex flex-col justify-center items-center bg-gradient-to-br from-[rgba(116,148,107,0.85)] to-[rgba(66,92,61,0.9)] text-white py-16 px-8 overflow-hidden mt-4">
-      {/* Animated shapes */}
+    <div className="relative w-full bg-gradient-to-br from-[rgba(116,148,107,0.85)] to-[rgba(66,92,61,0.9)]">
       {shapes.map((shape, i) => (
         <motion.div
           key={i}
@@ -94,49 +83,18 @@ const Content3 = () => {
         />
       ))}
 
-      {/* Content with 3D effect */}
       <motion.div
-        className="container-ct flex flex-col items-center text-center perspective-[1500px]"
+        className="container-ct perspective-[1500px]"
         style={{
           transform: `rotateX(${mousePosition.y}deg) rotateY(${mousePosition.x}deg)`,
           transition: "transform 0.5s cubic-bezier(0.03, 0.98, 0.52, 0.99)",
           transformStyle: "preserve-3d",
         }}
       >
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl font-bold uppercase"
-          style={{ transform: "translateZ(30px)" }}
-        >
-          {t("any_questions")}?
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-2 text-lg font-light"
-          style={{ transform: "translateZ(20px)" }}
-        >
-          {t("we_here")}
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          whileHover={{ scale: 1.05 }}
-          onClick={() => goToPage("/contact-us")}
-          className="mt-6 border-2 border-white text-white px-6 py-2 uppercase font-bold hover:bg-white hover:text-[rgba(66,92,61,1)] transition cursor-pointer"
-          style={{ transform: "translateZ(40px)" }}
-        >
-          {t("contact_me")}!
-        </motion.div>
+        {children}
       </motion.div>
     </div>
   );
 };
 
-export default Content3;
+export default ShapeCard;

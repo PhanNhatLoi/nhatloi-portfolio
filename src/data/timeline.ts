@@ -29,16 +29,6 @@ export const timelineData: TimelineItem[] = [
     description: "university_description",
   },
   {
-    id: "independentStudents",
-    period: "university_period",
-    startDate: "December 2021",
-    endDate: "August 2022",
-    images: [],
-    company: "Not affiliated with any company",
-    role: "Independent students",
-    description: "independent_description",
-  },
-  {
     id: "eCarAid",
     period: "ecaraid_period",
     startDate: "September 2022", // To be filled
