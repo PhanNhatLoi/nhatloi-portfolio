@@ -54,7 +54,7 @@ export const menuListHeaderTop = [
   {
     id: 2,
     label: "view_cv",
-    path: "https://www.canva.com/design/DAGK5VUvelU/wi5J38FWnX0BG8q5fsvXfA/edit",
+    path: "https://www.canva.com/design/DAGpOGi8DCk/uA6w5xzdBdOTqeiS2uhv0g/view?utm_content=DAGpOGi8DCk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h05893551c7",
     type: "_blank",
   },
   // {

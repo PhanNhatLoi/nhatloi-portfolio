@@ -4,7 +4,7 @@ import ExpandContent from "./ExpandContent";
 
 const Content2 = () => {
   const { t } = useTranslation();
-  const [itemActive, setItemActive] = useState<number | undefined>(1);
+  const [itemActive, setItemActive] = useState<number | undefined>(2);
   return (
     <>
       <div className="container-ct flex justify-center text-text-100">
