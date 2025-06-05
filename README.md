@@ -29,7 +29,7 @@ A modern **personal portfolio website** built with **Next.js** and **Tailwind CS
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/PhanNhatLoi/nhatloi-portfolio.git
 cd portfolio
 
 # Install dependencies
