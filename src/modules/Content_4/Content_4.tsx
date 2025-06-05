@@ -27,7 +27,7 @@ const newsData = [
     description:
       "A powerful backend service that automates joining online meetings, records video and chat content, transcribes multilingual speech to text using Google Cloud Speech-to-Text, and summarizes or answers questions about the meeting using OpenAI GPT.",
     tag: "NestJs",
-    link: "https://github.com/PhanNhatLoi/meeting-bot-be",
+    link: "https://github.com/PhanNhatLoi/meeting-bot-service",
   },
   {
     id: 4,
