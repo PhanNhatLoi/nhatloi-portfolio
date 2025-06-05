@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { menuList, menuListHeaderTop } from "@/src/configs/config";
+import { menuList } from "@/src/configs/config";
 import CloseIcon from "@mui/icons-material/Close";
 import HeaderFixedMobile from "./HeaderFixedMobile";
 import IconPinSvg from "@/src/iconSvgs/IconPin";
@@ -58,24 +58,6 @@ const HeaderSticky = () => {
             </div>
             <div className={`font-bold mr-6 ${isScrolled ? "hidden" : ""}`}>
               <LanguagesSelection />
-            </div>
-            <div
-              className={`flex items-center space-x-6 pl-6 border-l-[1px] border-white ${
-                isScrolled ? "hidden" : ""
-              }`}
-            >
-              {menuListHeaderTop.map((menu) => {
-                return (
-                  <a
-                    target={menu.type === "_blank" ? "_blank" : "_self"}
-                    key={menu.id}
-                    href={menu.path}
-                    className="hover:underline"
-                  >
-                    {t(menu.label)}
-                  </a>
-                );
-              })}
             </div>
           </div>
           <div

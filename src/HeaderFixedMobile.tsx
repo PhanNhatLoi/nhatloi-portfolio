@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconPinSvg from "@/src/iconSvgs/IconPin";
-import { menuList, menuListHeaderTop } from "@/src/configs/config";
+import { menuList } from "@/src/configs/config";
 import LanguagesSelection from "./Languages/Languages";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
@@ -19,7 +19,7 @@ const HeaderFixedMobile = () => {
   return (
     <header className="md:hidden block">
       <div className="md:hidden fixed z-50 top-0 right-0 left-0 h-[48px] bg-primary-100 flex justify-center">
-        <div className="z-50 bg-primary-300 h-full relative lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full px-[15px] py-auto flex items-center justify-between">
+        <div className="z-50 h-full relative lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full px-[15px] py-auto flex items-center justify-between">
           <div className="flex">
             {isMenuOpen ? (
               <div
@@ -75,20 +75,6 @@ const HeaderFixedMobile = () => {
                 );
               })}
             </ul>
-            <div className="w-full h-[100px] text-xs pt-[45px] px-[30px] flex justify-center gap-6">
-              {menuListHeaderTop.map((menu) => {
-                return (
-                  <a
-                    target={menu.type === "_blank" ? "_blank" : "_self"}
-                    key={menu.id}
-                    href={menu.path}
-                    className="hover:underline text-[#8B008B]"
-                  >
-                    {t(menu.label)}
-                  </a>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

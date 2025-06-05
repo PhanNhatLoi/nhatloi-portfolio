@@ -23,7 +23,6 @@ export default function Home() {
     <Layout>
       <VideoTop />
       <div className="w-full pt-10 mb-10" id="overview" />
-
       <Content1 />
       <div className="w-full pt-10  mb-10" id="skills" />
       <Content2 />

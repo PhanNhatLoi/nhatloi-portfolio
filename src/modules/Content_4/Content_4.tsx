@@ -22,6 +22,15 @@ const newsData = [
   },
   {
     id: 3,
+    image: "/images/projects/10.png",
+    title: "Auto meeting bot",
+    description:
+      "A powerful backend service that automates joining online meetings, records video and chat content, transcribes multilingual speech to text using Google Cloud Speech-to-Text, and summarizes or answers questions about the meeting using OpenAI GPT.",
+    tag: "NestJs",
+    link: "https://github.com/PhanNhatLoi/meeting-bot-be",
+  },
+  {
+    id: 4,
     image: "/images/projects/8.png",
     title: "DigitFace App",
     description:
@@ -30,7 +39,7 @@ const newsData = [
     link: "https://apps.apple.com/vn/app/digitface/id6673892991",
   },
   {
-    id: 4,
+    id: 5,
     image: "/images/projects/2.jpg",
     title: "EDENHUB APP",
     description:
@@ -39,7 +48,7 @@ const newsData = [
     link: "https://edenhub.vn/",
   },
   {
-    id: 5,
+    id: 6,
     image: "/images/projects/3.png",
     title: "Sellpath web",
     description:
@@ -48,7 +57,7 @@ const newsData = [
     link: null,
   },
   {
-    id: 6,
+    id: 7,
     image: "/images/projects/4.png",
     title: "AUTO REPAIR SHOP MANAGERMENT-WEB",
     description:
@@ -57,7 +66,7 @@ const newsData = [
     link: "https://portal.ecaraid.com",
   },
   {
-    id: 7,
+    id: 8,
     image: "/images/projects/1.png",
     title: "ECARAID-CONSUMER-WEB",
     description:
