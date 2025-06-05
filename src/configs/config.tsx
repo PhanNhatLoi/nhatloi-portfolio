@@ -4,6 +4,9 @@
  */
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME;
+import ContactMailIcon from "@mui/icons-material/ContactMail";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import DescriptionIcon from "@mui/icons-material/Description";
 
 export interface Imenu {
   id: number;
@@ -37,31 +40,34 @@ export const menuList = {
     path: "/#my-journey",
     description: "experience_des",
   },
-  // menu_5: {
-  //   id: 5,
-  //   label: "career",
-  //   path: "#",
-  //   description: "",
-  // },
 };
 
 export const menuListHeaderTop = [
   {
-    id: 1,
-    label: "contact",
-    path: "/contact-us",
+    key: "cv",
+    label: "view_cv",
+    icon: <DescriptionIcon fontSize="large" />,
+    color: "#FDCB6E",
+    onClick: () =>
+      window.open(
+        "https://www.canva.com/design/DAGpOGi8DCk/uA6w5xzdBdOTqeiS2uhv0g/view?utm_content=DAGpOGi8DCk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h05893551c7",
+        "_blank"
+      ),
   },
   {
-    id: 2,
-    label: "view_cv",
-    path: "https://www.canva.com/design/DAGpOGi8DCk/uA6w5xzdBdOTqeiS2uhv0g/view?utm_content=DAGpOGi8DCk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h05893551c7",
-    type: "_blank",
+    key: "contact",
+    icon: <ContactMailIcon fontSize="large" />,
+    label: "contact",
+    onClick: () => (window.location.href = "/contact-us"),
+    color: "#6C63FF",
   },
-  // {
-  //   id: 3,
-  //   label: "news_media",
-  //   path: "#",
-  // },
+  {
+    key: "phone",
+    icon: <LocalPhoneIcon fontSize="large" />,
+    label: "phone",
+    onClick: () => window.open("tel:+84367740971"),
+    color: "#00B894",
+  },
 ];
 
 /**

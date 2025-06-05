@@ -40,7 +40,7 @@ export default function FooterCard() {
               LinkedIn
             </a>
             <a
-              href="https://github.com/"
+              href="https://github.com/PhanNhatLoi"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline mt-6 mr-8 flex flex-row items-center w-full lg:w-auto"

@@ -83,14 +83,14 @@ export default function Carousel({
       <div className="w-full max-w-lg overflow-hidden">
         <div
           ref={carouselRef1}
-          className="flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory scroll-smooth"
+          className="flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory scroll-smooth rounded-lg"
         >
           {images.map((src, index) => (
             <img
               key={index}
               src={src}
               alt={`Slide ${index + 1}`}
-              className="w-full flex-shrink-0 snap-center"
+              className="w-full flex-shrink-0 snap-center rounded-lg"
             />
           ))}
         </div>
@@ -129,9 +129,12 @@ export default function Carousel({
               <h3 className="text-lg uppercase text-[20px] md:text-[24px] text-white hyphens-auto font-bold mt-1 line-clamp-3">
                 {t(item.title)}
               </h3>
-              <p className="text-sm text-gray-500 mt-2 text-[1rem]">
-                {item.description}
-              </p>
+              <p
+                className="text-sm text-gray-500 mt-2 text-[1rem]"
+                dangerouslySetInnerHTML={{
+                  __html: item.description,
+                }}
+              />
               {item.link ? (
                 <a
                   target="_blank"

@@ -131,8 +131,25 @@ const VideoTop = () => {
 
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-gradient-to-b from-primary-100/10 to-primary-100/5">
+      <div
+        className="absolute bottom-0 right-10 flex items-end justify-end pointer-events-none z-0"
+        style={{
+          opacity: 0.5,
+          height: "100%",
+        }}
+      >
+        <img
+          src="/images/avatar_no_background.png"
+          alt="Avatar Background"
+          style={{
+            height: "80%",
+            objectFit: "contain",
+          }}
+        />
+      </div>
+
       {/* Animated geometric shapes */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 left-10 overflow-hidden">
         {shapes.map((shape, i) => (
           <motion.div
             key={i}
@@ -166,9 +183,12 @@ const VideoTop = () => {
       </div>
 
       {/* Content Container with 3D Effect */}
-      <div className="relative h-full flex flex-col items-center justify-center perspective-[1500px]">
+      <div
+        className="relative h-full flex flex-col px-10 justify-end sm:justify-end md:justify-end lg:justify-center perspective-[1500px] pb-20"
+        pb-20
+      >
         <motion.div
-          className="container-ct text-center z-5 px-4"
+          className="container-ct z-5 px-4"
           style={{
             transform: `rotateX(${mousePosition.y}deg) rotateY(${mousePosition.x}deg)`,
             transition: "transform 0.5s cubic-bezier(0.03, 0.98, 0.52, 0.99)",
@@ -176,6 +196,11 @@ const VideoTop = () => {
           }}
         >
           <div className="transform-style-3d">
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[rgba(116,148,107,0.3)] via-[rgba(89,122,82,0.2)] to-transparent rounded-full blur-[100px]" />
+              <div className="absolute bottom-1/4 right-1/4 w-[32rem] h-[32rem] bg-gradient-to-l from-[rgba(116,148,107,0.35)] via-[rgba(89,122,82,0.25)] to-transparent rounded-full blur-[120px]" />
+            </div>
+
             {/* Main Title with enhanced 3D effect */}
             <motion.h1
               variants={titleVariants}
@@ -191,7 +216,7 @@ const VideoTop = () => {
               variants={subtitleVariants}
               initial="hidden"
               animate="visible"
-              className="text-lg md:text-xl mb-8 max-w-2xl mx-auto font-medium backdrop-blur-sm"
+              className="text-lg md:text-xl mb-8 max-w-2xl font-medium backdrop-blur-sm"
               style={{
                 transform: "translateZ(25px) rotateX(5deg)",
                 color: "rgba(255,255,255,0.9)",
@@ -236,12 +261,6 @@ const VideoTop = () => {
             </motion.button>
           </div>
         </motion.div>
-
-        {/* Enhanced background effects */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[rgba(116,148,107,0.3)] via-[rgba(89,122,82,0.2)] to-transparent rounded-full blur-[100px]" />
-          <div className="absolute bottom-1/4 right-1/4 w-[32rem] h-[32rem] bg-gradient-to-l from-[rgba(116,148,107,0.35)] via-[rgba(89,122,82,0.25)] to-transparent rounded-full blur-[120px]" />
-        </div>
       </div>
 
       <style jsx global>{`
