@@ -64,7 +64,7 @@ export const menuListHeaderTop = [
   {
     key: "phone",
     icon: <LocalPhoneIcon fontSize="large" />,
-    label: "phone",
+    label: "phone_to_me",
     onClick: () => window.open("tel:+84367740971"),
     color: "#00B894",
   },
