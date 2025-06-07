@@ -18,11 +18,9 @@ export default function ScrollToTop() {
       <Slide direction={"up"} in={trigger}>
         <Fab
           onClick={scrollToTop}
-          color="primary"
           size="small"
           sx={{
             position: "fixed",
-            background: "white",
             borderRadius: 0,
             height: "40px",
             width: "60px",

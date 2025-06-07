@@ -134,7 +134,7 @@ const VideoTop = () => {
       <div
         className="absolute bottom-0 right-10 flex items-end justify-end pointer-events-none z-0"
         style={{
-          opacity: 0.5,
+          opacity: 0.65,
           height: "100%",
         }}
       >
