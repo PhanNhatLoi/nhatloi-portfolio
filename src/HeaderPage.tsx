@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { menuList } from "@/src/configs/config";
 import CloseIcon from "@mui/icons-material/Close";
 import HeaderFixedMobile from "./HeaderFixedMobile";
-import IconPinSvg from "@/src/iconSvgs/IconPin";
 import ScrollToTop from "./ScrollToTop";
 import LanguagesSelection from "./Languages/Languages";
 import { useTranslation } from "react-i18next";
@@ -48,14 +47,6 @@ const HeaderSticky = () => {
             }
           `}
           >
-            <div
-              className={`flex space-x-2 mr-6 items-center ${
-                isScrolled ? "hidden" : ""
-              }`}
-            >
-              <IconPinSvg color={"white"} />
-              <span className="hover:underline">{t("locale")}</span>
-            </div>
             <div className={`font-bold mr-6 ${isScrolled ? "hidden" : ""}`}>
               <LanguagesSelection />
             </div>

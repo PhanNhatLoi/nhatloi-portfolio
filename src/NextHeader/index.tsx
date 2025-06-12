@@ -9,14 +9,14 @@ function NextHeader(props: Props) {
   const { seoProps = {} } = props;
 
   const defaultProps: NextSeoProps = {
-    title: `Nhatloi portfolio`,
+    title: `Nhat Loi`,
     canonical: SITE_URL,
     description: "Software Engineer",
     openGraph: {
       type: "website",
       locale: "vi_VN",
       url: SITE_URL,
-      siteName: "Nhatloi portfolio",
+      siteName: "Nhatloi",
     },
   };
 

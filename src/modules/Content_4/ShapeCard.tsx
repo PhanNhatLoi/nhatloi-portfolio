@@ -51,7 +51,7 @@ const ShapeCard = ({ children }: { children: React.ReactNode }) => {
   );
 
   return (
-    <div className="relative w-full bg-gradient-to-br from-[rgba(116,148,107,0.85)] to-[rgba(66,92,61,0.9)]">
+    <div className="relative w-full h-full bg-gradient-to-br from-[rgba(116,148,107,0.85)] to-[rgba(66,92,61,0.9)]">
       {shapes.map((shape, i) => (
         <motion.div
           key={i}

@@ -5,7 +5,6 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME;
 import ContactMailIcon from "@mui/icons-material/ContactMail";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import DescriptionIcon from "@mui/icons-material/Description";
 
 export interface Imenu {
@@ -60,13 +59,6 @@ export const menuListHeaderTop = [
     label: "contact",
     onClick: () => (window.location.href = "/contact-us"),
     color: "#6C63FF",
-  },
-  {
-    key: "phone",
-    icon: <LocalPhoneIcon fontSize="large" />,
-    label: "Phone",
-    onClick: () => window.open("tel:+84367740971"),
-    color: "#00B894",
   },
 ];
 

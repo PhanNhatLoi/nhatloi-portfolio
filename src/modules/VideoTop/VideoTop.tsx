@@ -184,7 +184,7 @@ const VideoTop = () => {
 
       {/* Content Container with 3D Effect */}
       <div
-        className="relative h-full flex flex-col px-10 justify-end sm:justify-end md:justify-end lg:justify-center perspective-[1500px] pb-20"
+        className="relative h-full flex flex-col px-28 justify-end sm:justify-end md:justify-end lg:justify-center perspective-[1500px] pb-20"
         pb-20
       >
         <motion.div
@@ -229,8 +229,8 @@ const VideoTop = () => {
                 backdropFilter: "blur(4px)",
               }}
             >
-              Front-end Developer & UI/UX Designer crafting beautiful,
-              interactive web experiences
+              Fullstack Developer building elegant UIs and powerful backends,
+              from pixels to production.
             </motion.p>
 
             {/* CTA Button with glass morphism */}

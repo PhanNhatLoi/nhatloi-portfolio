@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: http://localhost:6001/
+
+# Sitemaps
+Sitemap: http://localhost:6001/sitemap.xml

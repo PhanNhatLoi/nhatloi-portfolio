@@ -3,13 +3,14 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { debounce } from "lodash";
 import { useTranslation } from "react-i18next";
+import { TimelineItem } from "@/src/data/timeline";
 
 export default function Carousel({
   data,
   currentIndex,
   setCurrentIndex,
 }: {
-  data: any[];
+  data: TimelineItem[];
   currentIndex: number;
   setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
 }) {
@@ -73,7 +74,7 @@ export default function Carousel({
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000); // Tự động chuyển slide sau mỗi 5 giây
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [currentIndex]);
@@ -90,7 +91,7 @@ export default function Carousel({
               key={index}
               src={src}
               alt={`Slide ${index + 1}`}
-              className="w-full flex-shrink-0 snap-center rounded-lg"
+              className="w-full flex-shrink-0 snap-center rounded-lg object-cover"
             />
           ))}
         </div>
@@ -118,39 +119,23 @@ export default function Carousel({
           {data.map((item, index) => (
             <div
               key={index}
-              className="w-full h-auto flex-shrink-0 snap-center p-4"
+              className="w-full h-auto flex-shrink-0 snap-center px-4"
             >
               <div className="mb-6">
-                <span className="text-xs text-white bg-primary-200 px-2 py-1">
-                  {item?.tag}
+                <span className="text-md text-white bg-primary-200 p-2 text-center w-fit flex items-center justify-center">
+                  {item?.role}
                 </span>
               </div>
 
-              <h3 className="text-lg uppercase text-[20px] md:text-[24px] text-white hyphens-auto font-bold mt-1 line-clamp-3">
-                {t(item.title)}
+              <h3 className="text-lg text-[24px] md:text-[28px] text-white hyphens-auto font-bold mt-1 line-clamp-3">
+                {t(item.company)}
               </h3>
               <p
-                className="text-sm text-gray-500 mt-2 text-[1rem]"
+                className="text-primary-200 mt-2 text-md"
                 dangerouslySetInnerHTML={{
-                  __html: item.description,
+                  __html: t(item.description),
                 }}
               />
-              {item.link ? (
-                <a
-                  target="_blank"
-                  href={item.link}
-                  className="w-full text-primary-200 mt-2 inline-block absolute bottom-[10px] md:bottom-[130px]"
-                >
-                  <ArrowForwardIosIcon /> {t("read_more")}
-                </a>
-              ) : (
-                <div
-                  className="w-full text-primary-200 mt-2 inline-block absolute
-                  bottom-[10px] md:bottom-[130px]"
-                >
-                  {t("project_in_progress")}
-                </div>
-              )}
             </div>
           ))}
         </div>
