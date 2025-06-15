@@ -131,7 +131,7 @@ export default function Carousel({
                 {t(item.company)}
               </h3>
               <p
-                className="text-primary-200 mt-2 text-md"
+                className="text-white mt-2 text-md"
                 dangerouslySetInnerHTML={{
                   __html: t(item.description),
                 }}
