@@ -46,26 +46,6 @@ const VideoTop = () => {
     },
   };
 
-  const buttonVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        delay: 0.4,
-        ease: "easeOut",
-      },
-    },
-    hover: {
-      scale: 1.05,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   // Define shapes with fixed positions using useMemo
   const shapes = useMemo(
     () => [
@@ -209,6 +189,21 @@ const VideoTop = () => {
               className={`text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold mb-6 relative text-primary-100 ${styles.gradientTitle}`}
             >
               {APP_NAME}
+              <motion.span
+                className="text-[1.2rem] font-semibold ml-4 px-3 py-1 rounded-lg"
+                style={{
+                  background: "linear-gradient(90deg, #b7e7b0, #7ba97b)",
+                  color: "#222",
+                  boxShadow: "0 0 8px 0px #b7e7b0, 0 0 16px 2px #7ba97b",
+                  animation: "glow 2s infinite alternate",
+                  letterSpacing: "1px",
+                }}
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5, duration: 0.8, type: "spring" }}
+              >
+                💻 Software Engineer
+              </motion.span>
             </motion.h1>
 
             {/* Subtitle with glass effect */}
@@ -238,13 +233,24 @@ const VideoTop = () => {
               onClick={() => {
                 router.push("/#overview");
               }}
-              variants={buttonVariants}
-              initial="hidden"
-              animate="visible"
+              initial={{ scale: 0.8, y: 0 }}
+              animate={{
+                scale: 1,
+                y: [0, -12, 0, 12, 0],
+              }}
+              transition={{
+                opacity: { duration: 0.6, delay: 0.4, ease: "easeOut" },
+                scale: { duration: 0.6, delay: 0.4, ease: "easeOut" },
+                y: {
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                },
+              }}
               whileHover={{
-                scale: 1.05,
-                boxShadow: "0 15px 30px rgba(66,92,61,0.3)",
-                backdropFilter: "blur(10px)",
+                scale: 1.08,
+                boxShadow: "0 20px 40px rgba(66,92,61,0.35)",
+                backdropFilter: "blur(12px)",
               }}
               className="px-8 py-3 text-white rounded-full font-semibold transition-all relative overflow-hidden"
               style={{
@@ -286,10 +292,10 @@ const VideoTop = () => {
         }
         @keyframes glow {
           from {
-            filter: drop-shadow(0 0 20px rgba(116, 148, 107, 0.5));
+            filter: drop-shadow(0 0 6px #b7e7b0);
           }
           to {
-            filter: drop-shadow(0 0 30px rgba(116, 148, 107, 0.8));
+            filter: drop-shadow(0 0 16px #7ba97b);
           }
         }
       `}</style>
