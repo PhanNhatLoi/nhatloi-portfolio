@@ -113,6 +113,22 @@ const newsData = [
     tag: "NextJS",
     link: "https://hs-globallogistics.com/",
   },
+  {
+    id: 14,
+    image: "/images/projects/16.png",
+    title: "E-commerce Template Free",
+    description: "ecommerce_template_free_description",
+    tag: "NextJS",
+    link: "https://template-shop-nextjs-free.vercel.app/",
+  },
+  {
+    id: 15,
+    image: "/images/projects/17.png",
+    title: "Restaurant Template Free",
+    description: "restaurant_template_free_description",
+    tag: "NextJS",
+    link: "https://restaurent-nextjs-five.vercel.app/",
+  },
 ];
 
 export default function ProjectContent() {

@@ -38,17 +38,34 @@
 
 - Ưu điểm của TypeScript:
 
-* Hỗ trợ static typing: Chức năng đặc biết chỉ có ở Typescript,có thể khai báo kiểu cho biến và giúp trình biên dịch giảm thiểu được tỷ lệ gán sai của giá trị. Nếu bạn bỏ qua khai báo kiểu thì code của bạn sẽ tự động phát hiện.(Khi Typescript được biên dịch thành javascript thì mọi khai báo kiểu sẽ bị xóa)
-* Interfaces: Typescript được sử dụng với mục đích kiểm tra, xem xét sự phù hợp của đối tượng với cấu trúc nhất định và hỗ trợ trong giai đoạn phát triển. Bạn có thể đặt tên khi có sự kết hợp đặc biệt của các biến bằng cách định nghĩa Interfaces và đảm bảo rằng chúng luôn đi cùng nhau.
+* Hỗ trợ static typing: Chức năng đặc biệt chỉ có ở Typescript, có thể khai báo kiểu cho biến và giúp trình biên dịch giảm thiểu được tỷ lệ gán sai của giá trị. Nếu bạn bỏ qua khai báo kiểu thì code của bạn sẽ tự động phát hiện.(Khi Typescript được biên dịch thành javascript thì mọi khai báo kiểu sẽ bị xóa)
 * Classes: Typescript cung cấp một hệ thống class khá giống với các ngôn ngữ java, C# như abstract classes, chức năng kế thừa, setter/getters, interface implementations,...
 
 - Không thể thay thế typescript hoàn toàn cho Js được, vì bản chất typescript chỉ là một công cụ để kiểm soát js một cách chặt chẽ hơn, sự kết hợp giữa typescript và ESLint tạo ra một rule chuẩn cho các dự án vừa và lớn, phù hợp cho việc nâng cấp, bảo trì code. typescript về cuối cùng vẫn phải biên dịch ra js để có thể chạy vì thế không thể thay thế ts cho js được.
 
+- Một vài thứ về type và interface:
+- Về cơ bản interface và type để để định nghĩa cấu trúc cho một object, tuy nhiên tùy vào mục đích sử dụng mà có các định nghĩa khác nhau.
+
+* Đối với các class, object hoặc cần sử dụng tính chất kế thừa thì ưu tiên sử dụng interface
+* Đối với các cấu trúc phức tạp hơn nên ưu tiên sử dụng type (Union, Intersection,Tuple, function,...)
+
+- Union type: là kiểu dữ liệu 1 trong số. Ví dụ: type gender = "male" | "femail"
+- Intersection: là kiểu dữ liệu giao. Ví dụ:
+  type A = { name: string };
+  type B = { age: number };
+
+type C = A & B; (Gần giống với kết thừa trong classes)
+
+- function type: là kiểu function. Ví dụ: type Sum = (a:number, b:number) => number
+- Tuple type: là kiểu bộ cố định phần tử, kiểu phần tử.
+  Ví dụ: let tuple: [string, number]. Ở đây [string, number] là tuple. Kiểu dữ liệu bắt buộc là mảng 2 phần tử, phần tử thứ nhất là string và phần tử thứ 2 là number.
+
 5. Kể tên các hook của React thường được sử dụng nhất.
+   Các hook của React được tạo và sử dụng trong function component với mục đích hạn chế việc rerender component không cần thiết từ đó tối ưu hiệu năng.
 
 - useState : dùng để khai báo state trong component.
-- useEffect: dùng để viết các xử lý khi rerender component, dựa vào dependence để có những xử lý phù hợp.(điều kiện để useEffect chạy là lần đầu tiên khi component didMount và khi một trong dependence có sự thay đổi)
-- useMemo: Khá giống với useEffect nhưng có thể return về một giá trị nhất định dưới dạng một biến
+- useEffect: dùng để viết các xử lý khi rerender component, dựa vào dependences để có những xử lý phù hợp.(điều kiện để useEffect chạy là lần đầu tiên khi component didMount và khi một trong dependence có sự thay đổi)
+- useMemo: là một hook trả về một giá trị và sẽ cập nhật lại kết quả dựa vào dependences. Nên dùng cho các phép tính nhiều logic hoặc giá trị phụ thuộc
   ví dụ: const numbers = useMemo(() => {
   const result = [1, 1];
   for (let i = 2; i < length; i++) {
@@ -56,7 +73,8 @@
   }
   return result;
   }, [length]);
-- useCallback: Giống với useMemo nhưng có thể truyền vào các biến số và có khả năng trả về một Element có thể render trong React.
+
+- useCallback: Là một hook khá tương tự useMemo nhưng trả về function.
   ví dụ: const NumberItemRender = useCallback(({initValue}) => {
   const result = initValue || []
   for (let i = 2; i < length; i++) {
@@ -93,8 +111,34 @@
 
 - Nếu trường hợp có nhiều api cần trả về kết quả cùng lúc và để tiết kiệm thời gian thì cần xử lý như thế nào.
   Sử dụng Promise.all để thực hiện nhiều xử lý bất đồng bộ song song, Hàm này sẽ kết thúc khi tất cả các lời hứa đều hoàn thành hoặc có ít nhất một lời hứa bị từ chối.
+  Ngoài ra Promise.allSettled cũng có thể xử lý nhiều bất đồng bộ song song, sự khác biệt là nếu có các hàm thực thi bị lỗi thì hàm vẫn không bị dừng lại
 - Js là ngôn ngữ đơn luồng hay đa luồng?;
   Js là ngôn ngữ đơn luồng.
+  Lý do js là ngôn ngữ đơn luồng nhưng vẫn có thể xử lý song song nhiều việc cùng lúc.
+  Thực chất JS không làm hết, nó sẽ nhờ đến Trình duyệt (hoặc NodeJs) làm giúp.
+  JS chỉ làm một việc trong 1 lúc, nhưng JS sẽ sử dụng cơ chế Event Loop để điều phối công việc.
+  Điều phối công việc là sao:
+  Giả sử ta có hàm thực thi:
+  console.log("Bắt đầu");
+  setTimeout(() => {
+  console.log("Đợi 3 giây xong");
+  }, 3000);
+  console.log("Kết thúc");
+
+  Kết quả in ra sẽ là:
+  Bắt đầu
+  Kết thúc
+  Đợi 3 giây xong
+
+  Vì sao dòng lệnh console.log("Đợi 3 giây xong"); nằm trên nhưng lại in ra cuối cùng. Theo cơ chế Event loop thì công việc sẽ được điều phối như sau
+  console.log("Bắt đầu"); được đưa vào Call Stack. lúc này đang chưa có gì trong stack nên thực thi luôn
+  setTimeout(() => {
+  console.log("Đợi 3 giây xong");
+  }, 3000);
+  Thực thi và gặp settimeOut (Js hiểu đây là việc bất đồng bộ) đẩy sang cho browser thực hiện việc đợi 3s
+  console.log("Kết thúc"); được đưa vào Call Stack. lúc này đang chưa có gì trong stack nên thực thi luôn
+  sau khi 3s kết thúc, browser đẩy console.log("Đợi 3 giây xong"); vào Call Stack và thực hiện
+
 - Nêu các hàm xử lý với mảng:
 
 * array.map()
@@ -109,3 +153,28 @@
 - Làm cách nào để dừng lại một vòng lặp duyệt qua hàm array.map()?
 
 * Sử dụng throw
+
+Các biện pháp tối ưu hiệu năng:
+
+- Sử dụng tối ưu các hook của React useMemo, useCallback, useRef(khi cần lưu giá trị mà không render lại UI, thường sử dụng với animation, dom ref, cache, timeout,...), memo để hạn chế render component không cần thiết.
+- Tránh memory leak hoặc chạy lại effect không cần thiết thì cần dọn dẹp useEffect đúng cách.
+- Dùng các thẻ rỗng (<></> hoặc React.Fragment) để giảm dom không cần thiết (gom nhóm và không cần truyền bất cứ thuộc tính nào cho thẻ).
+- Tách nhỏ component việc tách nhỏ sẽ khiến các component chỉ rerender lại nếu bên trong phần thân component có sự thay đổi về props hoặc state. (ngoài ra giúp tái sử dụng, dễ quản lý - enhancement code, giảm code trùng lặp => giảm dung lượng bunlde)
+- Tránh truyền object/array vào component
+  ⚠️ Sai cách
+  <Child count={()=> a+b } />
+
+  ✅ Đúng cách
+  const options = useMemo(() => return a+b , []);
+  <Child options={options} />
+  ==> Việc này tương tự ý nghĩa của việc tách nhỏ component, việc truyền vào một object hoặc 1 function mới vào component sẽ phải thực thi lại, dù nội dung giống nhau. Giả sử truyền từ ngoài vào một function tính toán kết quả a + b, và component này lặp lại 5 item trong list, thì mỗi component sẽ phải tính a + b đủ 5 lần dù phép tính là giống nhau.
+  Tương tự thì nên thay thế cssinline bằng CSS modules, styled-components, hoặc class CSS.
+  nhưng với options là useMemo thì chỉ cần tính 1 lần và kết quả đó sẽ được truyền thẳng vào như một prop không đổi.
+
+- Dùng key đúng cách khi render list
+  React không render lại toàn bộ danh sách mà chỉ cập nhật đúng phần tử bị thay đổi, giúp tái sử dụng DOM node để tăng tốc.
+  nên sử dụng các giá trị unique để làm key, không nên sử dụng index (biến phụ thuộc vào list) để làm key(index sẽ bị thay đổi đối với phần tử khi list bị xóa hoặc thêm)
+
+- Sử dụng lazy, Suspense để phân tách dữ liệu.
+  Đối với các api trả về lượng lớn dữ liệu mà trên thực tế lượng dữ liệu này sẽ không thể hiển thị hết trên UI thì việc lấy về tất cả là không cần thiết nhưng lại ép buộc Component render lượng lớn dữ liệu (có thể xảy ra tình trạng tràn dữ liệu).
+  thực hiện các phương pháp phân trang và lazyloading trước khi cần đến dữ liệu.
