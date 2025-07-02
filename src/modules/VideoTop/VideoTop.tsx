@@ -167,7 +167,7 @@ const VideoTop = () => {
 
       {/* Content Container with 3D Effect */}
       <div
-        className="relative h-full flex flex-col px-28 justify-end sm:justify-end md:justify-end lg:justify-center perspective-[1500px] pb-20"
+        className="relative h-full flex flex-col px-0 md:px-28 lg:px-28 justify-end sm:justify-end md:justify-end lg:justify-center perspective-[1500px] pb-20"
         pb-20
       >
         <motion.div
@@ -184,32 +184,32 @@ const VideoTop = () => {
               <div className="absolute bottom-1/4 right-1/4 w-[32rem] h-[32rem] bg-gradient-to-l from-[rgba(116,148,107,0.35)] via-[rgba(89,122,82,0.25)] to-transparent rounded-full blur-[120px]" />
             </div>
 
-            {/* Main Title with enhanced 3D effect */}
             <motion.h1
               variants={titleVariants}
               initial="hidden"
               animate="visible"
-              className={`text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold mb-6 relative text-primary-100 ${styles.gradientTitle}`}
+              className={`word-break-keep text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold mb-6 relative text-primary-100 ${styles.gradientTitle}`}
             >
-              {APP_NAME}
-              <motion.span
-                className="text-[1.2rem] font-semibold ml-4 px-3 py-1 rounded-lg"
-                style={{
-                  background: "linear-gradient(90deg, #b7e7b0, #7ba97b)",
-                  color: "#222",
-                  boxShadow: "0 0 8px 0px #b7e7b0, 0 0 16px 2px #7ba97b",
-                  animation: "glow 2s infinite alternate",
-                  letterSpacing: "1px",
-                }}
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5, duration: 0.8, type: "spring" }}
-              >
-                💻 Software Engineer
-              </motion.span>
+              <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                <span>{APP_NAME}</span>
+                <motion.span
+                  className="text-[1.2rem] font-semibold px-3 py-1 rounded-lg w-fit"
+                  style={{
+                    background: "linear-gradient(90deg, #b7e7b0, #7ba97b)",
+                    color: "#222",
+                    boxShadow: "0 0 8px 0px #b7e7b0, 0 0 16px 2px #7ba97b",
+                    animation: "glow 2s infinite alternate",
+                    letterSpacing: "1px",
+                  }}
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.5, duration: 0.8, type: "spring" }}
+                >
+                  💻 Software Engineer
+                </motion.span>
+              </div>
             </motion.h1>
 
-            {/* Subtitle with glass effect */}
             <motion.p
               variants={subtitleVariants}
               initial="hidden"
@@ -231,7 +231,6 @@ const VideoTop = () => {
               from pixels to production.
             </motion.p>
 
-            {/* CTA Button with glass morphism */}
             <motion.button
               onClick={() => {
                 router.push("/#overview");
