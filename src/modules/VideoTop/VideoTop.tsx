@@ -4,6 +4,7 @@ import router from "next/router";
 import { useEffect, useState, useMemo } from "react";
 import styles from "./VideoTop.module.css";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const VideoTop = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -118,9 +119,11 @@ const VideoTop = () => {
           height: "100%",
         }}
       >
-        <img
+        <Image
           src="/images/avatar_no_background.png"
           alt="Avatar Background"
+          width={600}
+          height={1000}
           style={{
             height: "80%",
             objectFit: "contain",

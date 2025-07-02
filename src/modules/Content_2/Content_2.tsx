@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import ExpandContent from "./ExpandContent";
+import Image from "next/image";
 
 const Content2 = () => {
   const { t } = useTranslation();
@@ -26,13 +27,17 @@ const Content2 = () => {
                 } absolute top-0 right-0 bottom-0 w-[60%] xl:w-[67%] h-[710px] overflow-hidden`}
               >
                 <div className="inset-0 absolute hidden xl:block">
-                  <img
+                  <Image
+                    fill
+                    alt="web-design_2"
                     className="w-full h-full"
                     src="/images/web-design_2.png"
                   />
                 </div>
                 <div className="inset-0 absolute block xl:hidden">
-                  <img
+                  <Image
+                    fill
+                    alt="web-design_3"
                     className="w-full h-full"
                     src="/images/web-design_3.png"
                   />
@@ -80,13 +85,17 @@ const Content2 = () => {
                 } absolute top-0 right-0 bottom-0 w-[60%] xl:w-[67%] h-[710px] overflow-hidden`}
               >
                 <div className="inset-0 absolute hidden xl:block">
-                  <img
+                  <Image
+                    fill
+                    alt="Supply-Chain"
                     className="w-full h-full"
                     src="/images/Supply-Chain.png"
                   />
                 </div>
                 <div className="inset-0 absolute block xl:hidden">
-                  <img
+                  <Image
+                    fill
+                    alt="Supply-Chain_2"
                     className="w-full h-full"
                     src="/images/Supply-Chain_2.png"
                   />
@@ -135,10 +144,20 @@ const Content2 = () => {
                 } absolute top-0 right-0 bottom-0 w-[60%] xl:w-[67%] h-[710px] overflow-hidden`}
               >
                 <div className="inset-0 absolute hidden xl:block">
-                  <img className="w-full h-full" src="/images/backend_2.png" />
+                  <Image
+                    fill
+                    alt="backend_2"
+                    className="w-full h-full"
+                    src="/images/backend_2.png"
+                  />
                 </div>
                 <div className="inset-0 absolute block xl:hidden">
-                  <img className="w-full h-full" src="/images/backend_3.png" />
+                  <Image
+                    fill
+                    alt="backend_3"
+                    className="w-full h-full"
+                    src="/images/backend_3.png"
+                  />
                 </div>
               </figure>
               <div

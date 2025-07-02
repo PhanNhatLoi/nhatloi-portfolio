@@ -1,6 +1,7 @@
 import React from "react";
 import ShapeCard from "./ShapeCard";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const newsData = [
   {
@@ -168,7 +169,10 @@ export default function ProjectContent() {
               {/* Front face */}
               <div className="flip-card-front">
                 <div className="rounded overflow-hidden shadow-lg h-full">
-                  <img
+                  <Image
+                    width={1000}
+                    height={192}
+                    objectFit="cover"
                     src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover"

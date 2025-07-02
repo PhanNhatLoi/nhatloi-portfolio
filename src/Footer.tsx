@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import ShapeCard from "./modules/Content_4/ShapeCard";
+import Image from "next/image";
 
 export default function FooterCard() {
   const { t } = useTranslation();
@@ -32,10 +33,12 @@ export default function FooterCard() {
               rel="noopener noreferrer"
               className="hover:underline mt-6 mr-8 flex flex-row items-center w-full lg:w-auto"
             >
-              <img
+              <Image
+                width={24}
+                height={24}
                 src="/images/linkedIn.svg"
                 alt="GitHub"
-                className="w-6 h-6 mr-2"
+                className="mr-2"
               />
               LinkedIn
             </a>
@@ -45,10 +48,12 @@ export default function FooterCard() {
               rel="noopener noreferrer"
               className="hover:underline mt-6 mr-8 flex flex-row items-center w-full lg:w-auto"
             >
-              <img
+              <Image
+                width={24}
+                height={24}
                 src="/images/github.svg"
                 alt="GitHub"
-                className="w-6 h-6 mr-2"
+                className="mr-2"
               />
               GitHub
             </a>

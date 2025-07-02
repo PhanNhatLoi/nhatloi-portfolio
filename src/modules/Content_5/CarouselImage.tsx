@@ -1,9 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { debounce } from "lodash";
 import { useTranslation } from "react-i18next";
 import { TimelineItem } from "@/src/data/timeline";
+import Image from "next/image";
 
 export default function Carousel({
   data,
@@ -34,15 +35,15 @@ export default function Carousel({
     });
   };
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     const newIndex = (currentIndex + 1) % images.length;
     setCurrentIndex(newIndex);
-  };
+  }, [currentIndex, images.length, setCurrentIndex]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
     setCurrentIndex(newIndex);
-  };
+  }, [currentIndex, images.length, setCurrentIndex]);
 
   useEffect(() => {
     const handleScroll = debounce((carousel: HTMLDivElement | null) => {
@@ -56,14 +57,18 @@ export default function Carousel({
       handleScroll(target);
     };
 
-    [carouselRef1.current, carouselRef2.current].forEach((carousel) => {
+    // Store ref values in local variables
+    const carousel1 = carouselRef1.current;
+    const carousel2 = carouselRef2.current;
+
+    [carousel1, carousel2].forEach((carousel) => {
       if (carousel) {
         carousel.addEventListener("scroll", observer);
       }
     });
 
     return () => {
-      [carouselRef1.current, carouselRef2.current].forEach((carousel) => {
+      [carousel1, carousel2].forEach((carousel) => {
         if (carousel) {
           carousel.removeEventListener("scroll", observer);
         }
@@ -77,7 +82,7 @@ export default function Carousel({
     }, 7000);
 
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex, nextSlide]);
 
   return (
     <div className="flex flex-col md:flex-row gap-2">
@@ -87,7 +92,10 @@ export default function Carousel({
           className="flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory scroll-smooth rounded-lg"
         >
           {images.map((src, index) => (
-            <img
+            <Image
+              width={1000}
+              height={1000}
+              objectFit="cover"
               key={index}
               src={src}
               alt={`Slide ${index + 1}`}
