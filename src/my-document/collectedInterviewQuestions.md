@@ -178,3 +178,75 @@ Các biện pháp tối ưu hiệu năng:
 - Sử dụng lazy, Suspense để phân tách dữ liệu.
   Đối với các api trả về lượng lớn dữ liệu mà trên thực tế lượng dữ liệu này sẽ không thể hiển thị hết trên UI thì việc lấy về tất cả là không cần thiết nhưng lại ép buộc Component render lượng lớn dữ liệu (có thể xảy ra tình trạng tràn dữ liệu).
   thực hiện các phương pháp phân trang và lazyloading trước khi cần đến dữ liệu.
+
+### Tài liệu tổng hợp phỏng vấn kỹ thuật Front-End (ReactJS / NextJS) – Junior to Middle
+
+---
+
+#### **Phần 1 – JavaScript Cơ Bản và Nâng Cao**
+
+**Câu hỏi 1:** Giải thích sự khác nhau giữa `var`, `let`, và `const`. Khi nào nên dùng mỗi loại?
+
+- `var`: function-scoped, có hoisting, dễ gây bug.
+- `let`: block-scoped, không hoisting.
+- `const`: block-scoped, không thể gán lại (reassign), nhưng với object/array có thể thay đổi nội dung.
+
+**Câu hỏi 2:** Khi nào `this` trỏ về `window` và khi nào trỏ về đối tượng cụ thể?
+
+- Trong function thường (không ở strict mode): `this` trỏ về `window`.
+- Trong method gọi qua object: `this` trỏ về chính object đó.
+- Trong arrow function: `this` kế thừa từ phạm vi cha.
+
+---
+
+#### **Phần 2 – ReactJS**
+
+**Câu hỏi 3:** Controlled vs Uncontrolled Component
+
+- Controlled: Input được điều khiển qua state, dùng `value` và `onChange`.
+- Uncontrolled: Input dùng ref, giá trị lấy trực tiếp từ DOM.
+
+**Câu hỏi 4:** `React.memo` và `useMemo` khác nhau như thế nào?
+
+- `React.memo`: Bọc component để tránh render lại khi props không đổi.
+- `useMemo`: Memoize giá trị tính toán, tránh tính lại khi deps không đổi.
+
+**Câu hỏi 5:** `useCallback` là gì? Khi nào nên dùng?
+
+- Dùng để memoize hàm callback, đặc biệt khi truyền xuống component con.
+- Sai deps sẽ dẫn tới bug (logic sai hoặc render không tối ưu).
+
+**Câu hỏi 8:** Nếu 1 component bị render quá nhiều lần gây chậm UI, xử lý thế nào?
+
+- Kiểm tra logic và dependencies của hook.
+- Tách nhỏ component.
+- Dùng `React.memo`, `useMemo`, `useCallback` hợp lý.
+- Tối ưu key trong list.
+- Dùng phân trang, lazy load, virtual list.
+- Dùng debounce/throttle cho input hoặc hành động liên tục.
+
+---
+
+#### **Phần 3 – Next.js**
+
+**Câu hỏi 6:** Phân biệt `getServerSideProps`, `getStaticProps`, và `getInitialProps`
+
+- `getStaticProps`: Build-time, dùng cho nội dung tĩnh.
+- `getServerSideProps`: Server-side mỗi lần request.
+- `getInitialProps`: Chạy ở cả client và server, không hỗ trợ static optimization.
+
+**Câu hỏi 7:** Phân biệt App Router và Pages Router (Next.js 13+)
+
+- Pages Router:
+
+  - Tất cả route nằm trong `/pages`.
+  - Dùng `getServerSideProps`, `getStaticProps`, `_app.tsx`, `_document.tsx`.
+
+- App Router:
+
+  - Dùng `/app`, mỗi route gồm `page.tsx`, `layout.tsx`, `loading.tsx`, `error.tsx`.
+  - Hỗ trợ layout lồng nhau.
+  - Hỗ trợ Server Component, Streaming.
+  - Dùng `"use client"` để chỉ định component chạy ở client.
+
+---
