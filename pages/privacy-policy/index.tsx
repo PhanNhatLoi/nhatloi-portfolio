@@ -48,7 +48,7 @@ export default function PrivacyPolicy() {
       <p className="mb-4">
         Users have the right to access, update, or delete their personal data.
         Please contact us at{" "}
-        <span className="font-medium">your-email@example.com</span> for any
+        <span className="font-medium">phanloi971@gmail.com</span> for any
         requests.
       </p>
 
