@@ -10,8 +10,11 @@ const newsData = [
     title: "WISE Buddy",
     description: "wise_description",
     tag: "React-native",
-    appStore: "https://apps.apple.com/vn/app/wise-buddy/id6744956584?l=vi",
-    chplay: "https://play.google.com/store/apps/details?id=com.myzens.wise",
+    appStore:
+      "https://apps.apple.com/vn/app/wise-buddy-english/id6755937295?l=vi",
+    chplay:
+      "https://play.google.com/store/apps/details?id=vn.edu.wise_mobile&hl=vi",
+    linl: "https://wise.edu.vn/",
   },
   {
     id: 2,
@@ -55,7 +58,7 @@ const newsData = [
     description: "digitface_description",
     tag: "React native",
     appStore: "https://apps.apple.com/vn/app/digitface/id6673892991",
-    chplay: "https://play.google.com/store/apps/details?id=com.digitface",
+    chplay: "https://play.google.com/store/apps/details?id=com.digitface&hl=vi",
   },
   {
     id: 6,
