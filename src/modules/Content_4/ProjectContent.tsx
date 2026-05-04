@@ -5,7 +5,23 @@ import Image from "next/image";
 
 const newsData = [
   {
-    id: 1,
+    id: 16,
+    image: "/images/projects/19.png",
+    title: "Rubik landing",
+    description: "rubik-landing",
+    tag: "ReactJs",
+    link: "https://rubik-landing.vercel.app/",
+  },
+  {
+    id: 15,
+    image: "/images/projects/18.png",
+    title: "Threejs globe landing",
+    description: "threejs globe landing",
+    tag: "ReactJs",
+    link: "https://threejs-globe-landing.vercel.app/",
+  },
+  {
+    id: 14,
     image: "/images/projects/11.png",
     title: "WISE Buddy",
     description: "wise_description",
@@ -14,10 +30,10 @@ const newsData = [
       "https://apps.apple.com/vn/app/wise-buddy-english/id6755937295?l=vi",
     chplay:
       "https://play.google.com/store/apps/details?id=vn.edu.wise_mobile&hl=vi",
-    linl: "https://wise.edu.vn/",
+    link: "https://wise.edu.vn/",
   },
   {
-    id: 2,
+    id: 13,
     image: "/images/projects/12.png",
     title: "AiNote.one",
     description: "ainote_description",
@@ -25,7 +41,7 @@ const newsData = [
     link: "https://ainote.one",
   },
   {
-    id: 3,
+    id: 12,
     image: "/images/projects/10.png",
     title: "Auto meeting bot",
     description: "automeetingbot_description",
@@ -33,7 +49,7 @@ const newsData = [
     link: "https://github.com/PhanNhatLoi/meeting-bot-service",
   },
   {
-    id: 4,
+    id: 11,
     image: "/images/projects/13.png",
     title: "RKD System",
     description: "rkd_description",
@@ -41,7 +57,7 @@ const newsData = [
     link: "https://rkd-system.com",
   },
   {
-    id: 5,
+    id: 10,
     image: "/images/projects/2.jpg",
     title: "EDENHUB APP",
     description: "edenhub_description",
@@ -52,7 +68,7 @@ const newsData = [
       "https://play.google.com/store/apps/details?id=com.edenhub.farm.app&hl=vi",
   },
   {
-    id: 8,
+    id: 9,
     image: "/images/projects/8.png",
     title: "DigitFace App",
     description: "digitface_description",
@@ -61,7 +77,7 @@ const newsData = [
     chplay: "https://play.google.com/store/apps/details?id=com.digitface&hl=vi",
   },
   {
-    id: 6,
+    id: 8,
     image: "/images/projects/7.png",
     title: "Chat App realtime",
     description: "chatapp_fullstack_description",
@@ -86,7 +102,7 @@ const newsData = [
   //   link: "https://demo.sellpath.ai/",
   // },
   {
-    id: 10,
+    id: 6,
     image: "/images/projects/4.png",
     title: "AUTO REPAIR SHOP MANAGERMENT-WEB",
     description: "auto_repair_shop_description",
@@ -94,7 +110,7 @@ const newsData = [
     link: "https://portal.ecaraid.com",
   },
   {
-    id: 11,
+    id: 5,
     image: "/images/projects/1.png",
     title: "ECARAID-CONSUMER-WEB",
     description: "ecaraid_consumer_web_description",
@@ -102,7 +118,7 @@ const newsData = [
     link: "https://eca.ecaraid.com",
   },
   {
-    id: 12,
+    id: 4,
     image: "/images/projects/14.png",
     title: "HomNayAnGi",
     description: "homnayangi_description",
@@ -110,7 +126,7 @@ const newsData = [
     link: "http://103.129.127.239:3000/",
   },
   {
-    id: 13,
+    id: 3,
     image: "/images/projects/15.png",
     title: "hs-globallogistics",
     description: "hs_globallogistics_description",
@@ -118,7 +134,7 @@ const newsData = [
     link: "https://hs-globallogistics.com/",
   },
   {
-    id: 14,
+    id: 2,
     image: "/images/projects/16.png",
     title: "E-commerce Template Free",
     description: "ecommerce_template_free_description",
@@ -126,7 +142,7 @@ const newsData = [
     link: "https://template-shop-nextjs-free.vercel.app/",
   },
   {
-    id: 15,
+    id: 1,
     image: "/images/projects/17.png",
     title: "Restaurant Template Free",
     description: "restaurant_template_free_description",
